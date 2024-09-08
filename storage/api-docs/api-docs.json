@@ -1,0 +1,565 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API DOCS for BuyPin",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/banners": {
+            "get": {
+                "tags": [
+                    "Banners"
+                ],
+                "summary": "Get list of banners",
+                "operationId": "ef6e2a0694446d424bc4d5fa2458f5b1",
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Banner"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                }
+            }
+        },
+        "/api/banners/{id}": {
+            "get": {
+                "tags": [
+                    "Banners"
+                ],
+                "summary": "Get banner by ID",
+                "operationId": "a8c88eec6df3d3d95cffe6cc74c39489",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the banner",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Banner"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Banner not found"
+                    }
+                }
+            }
+        },
+        "/bonuses": {
+            "get": {
+                "tags": [
+                    "Bonuses"
+                ],
+                "summary": "Get all bonuses",
+                "operationId": "131515ec53ae586847f7a3643ec5ac9b",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "bonuses"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/bonuses/{id}": {
+            "get": {
+                "tags": [
+                    "Bonuses"
+                ],
+                "summary": "Get a specific bonus by ID",
+                "operationId": "a2c241a840ed43ab1e7405fcee59b45f",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the bonus",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "bonuses"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/bonuses/get/{promo}": {
+            "get": {
+                "tags": [
+                    "Bonuses"
+                ],
+                "summary": "Get bonus by promo code",
+                "operationId": "04bf60fdc4a5ff46e5b15617ced46023",
+                "parameters": [
+                    {
+                        "name": "promo",
+                        "in": "path",
+                        "description": "Promo code",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "bonuses"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/users": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Get list of users",
+                "operationId": "b7602e94041ff5d4b332d3c5ed6e8d3c",
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/BotUser"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                }
+            }
+        },
+        "/api/users/{id}": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Get user by ID",
+                "operationId": "308b7cf6de44f183d2acc9921462f44f",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the user",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BotUser"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "User not found"
+                    }
+                }
+            }
+        },
+        "/api/games": {
+            "get": {
+                "tags": [
+                    "Games"
+                ],
+                "summary": "Get all games",
+                "operationId": "93736f40a135111a310e4b25ad61f30b",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "games"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/promo-codes": {
+            "get": {
+                "tags": [
+                    "Promo Codes"
+                ],
+                "summary": "Get all promo codes",
+                "operationId": "1d0c5648eca614db028ce1efe3892c18",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "promo-codes"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/promo-codes": {
+            "post": {
+                "tags": [
+                    "Promo Codes"
+                ],
+                "summary": "Store a new promo code",
+                "operationId": "19888c8677883a0484492ca0ffc5772d",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "user_id": {
+                                        "type": "integer"
+                                    },
+                                    "game_id": {
+                                        "type": "integer"
+                                    },
+                                    "amount": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Promo code stored successfully"
+                    },
+                    "404": {
+                        "description": "Promo code not found"
+                    }
+                }
+            }
+        },
+        "/promo-codes/get-promo-code": {
+            "post": {
+                "tags": [
+                    "Promo Codes"
+                ],
+                "summary": "Get a promo code",
+                "operationId": "685918801165134ba88342fe355827b3",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "promo-codes"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "promo-codes"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/promo-codes/{game_id}": {
+            "get": {
+                "tags": [
+                    "Promo Codes"
+                ],
+                "summary": "Get promo codes by game ID",
+                "operationId": "aa04305f77b36bac96dba6e5c3ea3bdc",
+                "parameters": [
+                    {
+                        "name": "game_id",
+                        "in": "path",
+                        "description": "ID of the game",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "promo-codes"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/requests": {
+            "get": {
+                "tags": [
+                    "Requests"
+                ],
+                "summary": "Get all requests",
+                "operationId": "710454682359a38d76568e36c6cbe851",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "requests"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Requests"
+                ],
+                "summary": "Create a request",
+                "operationId": "fe92316bd8d2e46452c729e51b04fbb6",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "requests"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Request created",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "requests"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/game-tariffs": {
+            "post": {
+                "tags": [
+                    "Tariffs"
+                ],
+                "summary": "Get tariffs by game",
+                "operationId": "57d4e4434dd5e0a14b6ef4533fc69b50",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "tariffs"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "tariffs"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Banner": {
+                "title": "Banner",
+                "description": "Banner model",
+                "properties": {
+                    "id": {
+                        "description": "ID of the banner",
+                        "type": "integer"
+                    },
+                    "image": {
+                        "description": "Image of the banner",
+                        "type": "string"
+                    },
+                    "text": {
+                        "description": "Text of the banner",
+                        "type": "string"
+                    },
+                    "url": {
+                        "description": "URL of the banner",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "BotUser": {
+                "title": "BotUser",
+                "description": "BotUser model",
+                "properties": {
+                    "id": {
+                        "description": "ID of the user",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "Name of the user",
+                        "type": "string"
+                    },
+                    "email": {
+                        "description": "Email of the user",
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "description": "Creation timestamp",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "description": "Update timestamp",
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            },
+            "Game": {
+                "title": "Game",
+                "description": "Game model",
+                "properties": {
+                    "id": {
+                        "description": "ID of the game",
+                        "type": "integer"
+                    },
+                    "game_name": {
+                        "description": "Name of the game",
+                        "type": "string"
+                    },
+                    "thumb": {
+                        "description": "Thumbnail of the game",
+                        "type": "string"
+                    },
+                    "currency": {
+                        "description": "Currency of the game",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Banners",
+            "description": "Banners"
+        },
+        {
+            "name": "Bonuses",
+            "description": "Bonuses"
+        },
+        {
+            "name": "Users",
+            "description": "Users"
+        },
+        {
+            "name": "Games",
+            "description": "Games"
+        },
+        {
+            "name": "Promo Codes",
+            "description": "Promo Codes"
+        },
+        {
+            "name": "Requests",
+            "description": "Requests"
+        },
+        {
+            "name": "Tariffs",
+            "description": "Tariffs"
+        }
+    ]
+}
