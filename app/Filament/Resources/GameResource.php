@@ -22,7 +22,7 @@ class GameResource extends Resource
     protected static ?string $model = Game::class;
     protected static ?string $navigationGroup = "O'yinlar va Tariflar";
     protected static ?int $navigationSort = 1;
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-c-puzzle-piece';
 
     public static function form(Form $form): Form
     {
