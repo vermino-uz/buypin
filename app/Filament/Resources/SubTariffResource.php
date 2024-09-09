@@ -19,7 +19,7 @@ use Filament\Forms\Components\Select;
 
 class SubTariffResource extends Resource
 {
-    protected static ?string $navigationParentItem = 'Games';
+    protected static ?string $navigationParentItem = "O'yinlar";
     protected static ?string $navigationGroup = "O'yinlar va Tariflar";
     protected static ?int $navigationSort = 2;
     protected static ?string $model = SubTariff::class;
