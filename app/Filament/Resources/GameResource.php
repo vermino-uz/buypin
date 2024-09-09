@@ -18,6 +18,7 @@ use Filament\Tables\Columns\ImageColumn;
 
 class GameResource extends Resource
 {
+    protected static ?string $navigationLabel = "O'yinlar";
     protected static ?string $model = Game::class;
     protected static ?string $navigationGroup = "O'yinlar va Tariflar";
     protected static ?int $navigationSort = 1;
