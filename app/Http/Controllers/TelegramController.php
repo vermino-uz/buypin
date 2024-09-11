@@ -28,6 +28,11 @@ class TelegramController extends Controller
                                 'text' => 'Open BuyPin', 'web_app' => ['url' => 'https://admin.buypin.uz/admin'],
                             ]
                         ],
+                        [
+                            [
+                                'text' => 'Open BuyPin', 'web_app' => ['url' => 'https://admin.buypin.uz/admin'],
+                            ]
+                        ],
                     ],
                 ]),
             ]);
