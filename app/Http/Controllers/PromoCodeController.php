@@ -13,9 +13,9 @@ class PromoCodeController extends Controller
 {
    /**
      * @OA\Get(
-     *     path="/api/promo-codes",
+     *     path="/api/prices",
      *     summary="Get all promo codes",
-     *     tags={"Promo Codes"},
+     *     tags={"Prices"},
      *     @OA\Response(
      *         response=200,
      *         description="Successful operation",

@@ -21,7 +21,7 @@ Route::get('banners', [BannerController::class, 'index']);
 Route::get('banners/{id}', [BannerController::class, 'show']);
 Route::get('bonuses', [BonusController::class, 'index']);
 Route::get('bonuses/{id}', [BonusController::class, 'show']);
-Route::get('promo-codes', [PromoCodeController::class, 'index']);
+Route::get('prices', [PromoCodeController::class, 'index']);
 Route::get('promo-codes/{game_id}', [PromoCodeController::class, 'show']);
 Route::post('promo-codes/get-promo-code', [PromoCodeController::class, 'getPromoCode']);
 Route::get('bonuses/get/{promo}', [BonusController::class, 'getBonusByPromo']);
