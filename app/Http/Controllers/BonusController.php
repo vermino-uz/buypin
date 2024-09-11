@@ -9,7 +9,7 @@ class BonusController extends Controller
 {
     /**
      * @OA\Get(
-     *     path="/bonuses",
+     *     path="/api/bonuses",
      *     summary="Get all bonuses",
      *     tags={"Bonuses"},
      *     @OA\Response(
@@ -26,7 +26,7 @@ class BonusController extends Controller
     }
     /**
      * @OA\Get(
-     *     path="/bonuses/{id}",
+     *     path="/api/bonuses/{id}",
      *     summary="Get a specific bonus by ID",
      *     tags={"Bonuses"},
      *     @OA\Parameter(
@@ -51,7 +51,7 @@ class BonusController extends Controller
     }
         /**
      * @OA\Get(
-     *     path="/bonuses/get/{promo}",
+     *     path="/api/bonuses/get/{promo}",
      *     summary="Get bonus by promo code",
      *     tags={"Bonuses"},
      *     @OA\Parameter(
