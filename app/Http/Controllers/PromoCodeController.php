@@ -19,7 +19,7 @@ class PromoCodeController extends Controller
      *     @OA\Response(
      *         response=200,
      *         description="Successful operation",
-     *         @OA\JsonContent(type="array", @OA\Items(ref="promo-codes"))
+     *         @OA\JsonContent(type="array", @OA\Items(ref="#/components/schemas/PromoCode"))
      *     )
      * )
      */
@@ -74,12 +74,12 @@ class PromoCodeController extends Controller
      *     tags={"Promo Codes"},
      *     @OA\RequestBody(
      *         required=true,
-     *         @OA\JsonContent(ref="promo-codes")
+     *         @OA\JsonContent(ref="#/components/schemas/PromoCode")
      *     ),
      *     @OA\Response(
      *         response=200,
      *         description="Successful operation",
-     *         @OA\JsonContent(ref="promo-codes")
+     *         @OA\JsonContent(ref="#/components/schemas/PromoCode")
      *     )
      * )
      */
@@ -152,7 +152,7 @@ class PromoCodeController extends Controller
      *     @OA\Response(
      *         response=200,
      *         description="Successful operation",
-     *         @OA\JsonContent(ref="promo-codes")
+     *         @OA\JsonContent(ref="#/components/schemas/PromoCode")
      *     )
      * )
      */
