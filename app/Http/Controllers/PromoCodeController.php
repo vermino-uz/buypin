@@ -13,7 +13,7 @@ class PromoCodeController extends Controller
 {
    /**
      * @OA\Get(
-     *     path="/promo-codes",
+     *     path="/api/promo-codes",
      *     summary="Get all promo codes",
      *     tags={"Promo Codes"},
      *     @OA\Response(
@@ -69,7 +69,7 @@ class PromoCodeController extends Controller
     }
     /**
      * @OA\Post(
-     *     path="/promo-codes/get-promo-code",
+     *     path="/api/promo-codes/get-promo-code",
      *     summary="Get a promo code",
      *     tags={"Promo Codes"},
      *     @OA\RequestBody(
@@ -139,7 +139,7 @@ class PromoCodeController extends Controller
     }
         /**
      * @OA\Get(
-     *     path="/promo-codes/{game_id}",
+     *     path="/api/promo-codes/{game_id}",
      *     summary="Get promo codes by game ID",
      *     tags={"Promo Codes"},
      *     @OA\Parameter(
