@@ -18,7 +18,7 @@ class RequestController extends Controller
      *     @OA\Response(
      *         response=200,
      *         description="Successful operation",
-     *         @OA\JsonContent(type="array", @OA\Items(ref="requests"))
+     *         @OA\JsonContent(type="array", @OA\Items(ref="#/components/schemas/Request"))
      *     )
      * )
      */
@@ -35,12 +35,12 @@ class RequestController extends Controller
      *     tags={"Requests"},
      *     @OA\RequestBody(
      *         required=true,
-     *         @OA\JsonContent(ref="requests")
+     *         @OA\JsonContent(ref="#/components/schemas/Request")
      *     ),
      *     @OA\Response(
      *         response=201,
      *         description="Request created",
-     *         @OA\JsonContent(ref="requests")
+     *         @OA\JsonContent(ref="#/components/schemas/Request")
      *     )
      * )
      */
