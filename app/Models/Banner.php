@@ -17,10 +17,10 @@ use Illuminate\Database\Eloquent\Model;
  *     @OA\Property(property="url", type="string", description="URL of the banner"),
  * )
  */
+
 class Banner extends Model
 {
     use HasFactory;
-
     protected $fillable = [
         'image',
         'name',
