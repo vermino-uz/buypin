@@ -15,7 +15,7 @@ class BonusController extends Controller
      *     @OA\Response(
      *         response=200,
      *         description="Successful operation",
-     *         @OA\JsonContent(type="array", @OA\Items(ref="bonuses"))
+     *         @OA\JsonContent(type="array", @OA\Items(ref="/components/schemas/Bonus"))
      *     )
      * )
      */ 
@@ -39,7 +39,7 @@ class BonusController extends Controller
      *     @OA\Response(
      *         response=200,
      *         description="Successful operation",
-     *         @OA\JsonContent(ref="bonuses")
+     *         @OA\JsonContent(ref="/components/schemas/Bonus")
      *     )
      * )
      */
@@ -64,7 +64,7 @@ class BonusController extends Controller
      *     @OA\Response(
      *         response=200,
      *         description="Successful operation",
-     *         @OA\JsonContent(ref="bonuses")
+     *         @OA\JsonContent(ref="/components/schemas/Bonus")
      *     )
      * )
      */
