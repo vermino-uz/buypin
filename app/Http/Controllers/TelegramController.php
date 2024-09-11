@@ -14,10 +14,12 @@ class TelegramController extends Controller
         $text = $update->getMessage()->getText();
 
         if($text == '/start'){
-            $bot->sendMessage([
+            $bot->sendPhoto([
                 'chat_id' => $chat_id,
-                'text' => 'Welcome to our bot!'.$update->getMessage()->getChat()->getFirstName(),
+                'photo' => 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png',
+                'caption' => 'Welcome to our bot!'.$update->getMessage()->getChat()->getFirstName(),
             ]);
+            
         }
        
     }
