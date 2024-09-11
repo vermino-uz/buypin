@@ -9,7 +9,7 @@ class TelegramController extends Controller
     public function webhook(Request $request)
     {
         $bot = Telegram::bot('mybot');
-        $chat_id = $bot->getChatId();
+        $chat_id = $bot->getChat(['chat_id' => $request->chat_id]);
         Log::info($chat_id);
        
     }
