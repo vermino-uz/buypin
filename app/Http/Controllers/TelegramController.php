@@ -16,7 +16,7 @@ class TelegramController extends Controller
         if($text == '/start'){
             $bot->sendPhoto([
                 'chat_id' => $chat_id,
-                'photo' => 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png',
+                'photo' => \Telegram\Bot\FileUpload\InputFile::create('https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'),
                 'caption' => 'Welcome to our bot!',
             ]);
 
