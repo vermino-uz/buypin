@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Telegram\Bot\Laravel\Facades\Telegram;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Telegram\Bot\FileUpload\InputFile;
+
 class TelegramController extends Controller
 {
     public function webhook(Request $request)
@@ -14,7 +16,7 @@ class TelegramController extends Controller
         $chat_id = $update->getMessage()->getChat()->getId();
         $text = $update->getMessage()->getText();
 
-        if($text == '/start'){
+        if ($text == '/start') {
             $bot->sendPhoto([
                 'chat_id' => $chat_id,
                 'photo' => InputFile::create('https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'),
@@ -22,13 +24,14 @@ class TelegramController extends Controller
                 'reply_markup' => json_encode([
                     'inline_keyboard' => [
                         [
-                            'text' => 'Google',
-                            'url' => 'https://www.google.com',
+                            [
+                                'text' => 'Google',
+                                'url' => 'https://www.google.com',
+                            ]
                         ],
                     ],
-                ]), 
+                ]),
             ]);
         }
-       
     }
 }
