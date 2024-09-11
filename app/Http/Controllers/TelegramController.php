@@ -25,8 +25,7 @@ class TelegramController extends Controller
                     'inline_keyboard' => [
                         [
                             [
-                                'text' => 'Google',
-                                'url' => 'https://www.google.com',
+                                'text' => 'Open BuyPin', 'web_app' => ['url' => 'https://admin.buypin.uz/admin'],
                             ]
                         ],
                     ],
