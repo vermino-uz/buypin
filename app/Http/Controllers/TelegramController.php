@@ -10,12 +10,15 @@ class TelegramController extends Controller
     {
         $bot = Telegram::bot('mybot');
         $update = $bot->getWebhookUpdate();
-        $chat = $update->getMessage()->getChat()->getId();
-        $message = $update->getMessage()->getText();
-        Log::info($chat);
-        Log::info($message);
+        $chat_id = $update->getMessage()->getChat()->getId();
+        $text = $update->getMessage()->getText();
 
-        // Log::info($chat_id);
+        if($text == '/start'){
+            $bot->sendMessage([
+                'chat_id' => $chat_id,
+                'text' => 'Welcome to our bot!'.$update->getMessage()->getChat()->getFirstName(),
+            ]);
+        }
        
     }
 }
