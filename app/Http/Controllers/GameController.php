@@ -16,7 +16,7 @@ class GameController extends Controller
      *     @OA\Response(
      *         response=200,
      *         description="Successful operation",
-     *         @OA\JsonContent(type="array", @OA\Items(ref="games"))
+     *         @OA\JsonContent(type="array", @OA\Items(ref="#/components/schemas/Game"))
      *     )
      * )
      */ 
