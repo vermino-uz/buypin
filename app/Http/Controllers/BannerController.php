@@ -22,10 +22,7 @@ class BannerController extends Controller
  *     @OA\Response(
  *         response=401,
  *         description="Unauthorized"
- *         @OA\JsonContent(
- *             type="object",
- *             @OA\Property(property="message", type="string", description="Error message")
- *         )
+ *         
  *     )
  * )
  */
