@@ -31,7 +31,10 @@ class PriceByIdResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('id'),
+                Tables\Columns\TextColumn::make('price'),
+                Tables\Columns\TextColumn::make('amount'),
+                Tables\Columns\TextColumn::make('game_id'),
             ])
             ->filters([
                 //
