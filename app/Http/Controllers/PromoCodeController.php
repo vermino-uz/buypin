@@ -68,6 +68,7 @@ class PromoCodeController extends Controller
      *                 @OA\Property(property="price", type="number", description="Price"),
      *                 @OA\Property(property="tariff_id", type="integer", description="Tariff ID"),
      *                 @OA\Property(property="user_id", type="integer", description="User ID"),
+     *                 @OA\Property(property="promo", type="string", description="Promo code")
      *             }
      *         )
      *     ),
