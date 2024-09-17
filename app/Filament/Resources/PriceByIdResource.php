@@ -19,7 +19,8 @@ class PriceByIdResource extends Resource
     protected static ?string $model = PriceById::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
+    protected static ?string $navigationLabel = 'Tariffs By ID';
+    protected static ?string $navigationGroup = "O'yinlar";
     public static function form(Form $form): Form
     {
         return $form
