@@ -12,7 +12,7 @@ class RequestController extends Controller
 {
     /**
      * @OA\Get(
-     *     path="/requests",
+     *     path="/requests/{id}",
      *     summary="Get all requests",
      *     tags={"Requests"},
      *     @OA\Response(
@@ -23,9 +23,9 @@ class RequestController extends Controller
      * )
      */
     // List all requests
-    public function index()
+    public function index($id)
     {
-        $requests = Request::all();
+        $requests = Request::where('user_id', $id)->get();
         return response()->json($requests, 200);
     }
     /**

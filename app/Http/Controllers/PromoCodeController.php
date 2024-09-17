@@ -52,7 +52,7 @@ class PromoCodeController extends Controller
      *             properties={
      *                 @OA\Property(property="game_id", type="integer", description="Game ID"),
      *                 @OA\Property(property="user_id", type="integer", description="User ID"),
-     *                 @OA\Property(property="tariff_id", type="integer", description="Tariff ID")
+     *                 @OA\Property(property="amount", type="integer", description="Amount of value")
      *             }
      *         )
      *     ),
