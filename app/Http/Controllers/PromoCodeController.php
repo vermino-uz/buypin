@@ -46,7 +46,15 @@ class PromoCodeController extends Controller
      *     tags={"Promo Codes"},
      *     @OA\RequestBody(
      *         required=true,
-     *         @OA\JsonContent(ref="#/components/schemas/PromoCode")
+     *         @OA\JsonContent(
+     *             type="object",
+     *             required={"game_id", "user_id", "tariff_id"},
+     *             properties={
+     *                 @OA\Property(property="game_id", type="integer", description="Game ID"),
+     *                 @OA\Property(property="user_id", type="integer", description="User ID"),
+     *                 @OA\Property(property="tariff_id", type="integer", description="Tariff ID")
+     *             }
+     *         )
      *     ),
      *     @OA\Response(
      *         response=200,
