@@ -34,7 +34,7 @@ class PriceByIdResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('id'),
                 Tables\Columns\TextColumn::make('price'),
-                Tables\Columns\TextColumn::make('amount')->label('Amount')->formatStateUsing(fn ($record) => $record->amount . ' UC'),
+                Tables\Columns\TextColumn::make('amount')->label('Amount')->formatStateUsing(fn ($record) => $record->amount . Game::find($record->game_id)->currency),
                 Tables\Columns\TextColumn::make('game_id'),
             ])
             ->filters([
