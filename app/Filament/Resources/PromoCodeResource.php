@@ -66,7 +66,19 @@ class PromoCodeResource extends Resource
                     }),
                 TextInput::make('promo')
                     ->label('Promo')
-                    ->disabled(fn ($get) => !$get('amount')),
+                    ->textarea()
+                    ->disabled(fn ($get) => !$get('amount'))
+                    ->reactive()
+                    ->afterStateUpdated(function ($state, callable $set) {
+                        if ($state) {
+                            $records = explode("\n", $state);
+                            foreach ($records as $record) {
+                                $set('promo', $record);
+                            }
+                        } else {
+                            $set('promo', null);
+                        }
+                    }),
                 Forms\Components\Hidden::make('price'),
             ]);
     }
