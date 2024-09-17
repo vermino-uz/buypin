@@ -40,7 +40,7 @@ class PromoCodeResource extends Resource
                         $set('amount', null);
                         $set('promo', null);
                     }),
-                Select::make('amount')
+                Select::make('amount') 
                     ->label('Amount')
                     ->options(function ($get) {
                         $gameId = $get('game_id');
