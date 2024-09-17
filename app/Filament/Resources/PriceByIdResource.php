@@ -52,7 +52,7 @@ class PriceByIdResource extends Resource
                 'game_id',
             ])
             ->defaultGroup('game_id')
-            ->groupsOnly();
+            ->groupBy('game_id');
     }
 
     public static function getRelations(): array
