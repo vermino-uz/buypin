@@ -23,7 +23,7 @@ class SubTariffResource extends Resource
     protected static ?string $navigationGroup = "O'yinlar va Tariflar";
     protected static ?int $navigationSort = 2;
     protected static ?string $model = SubTariff::class;
-
+    protected static ?string $navigationLabel = 'Promo Tariflar';
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Form $form): Form
