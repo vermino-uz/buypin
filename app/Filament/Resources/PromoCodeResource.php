@@ -40,7 +40,6 @@ class PromoCodeResource extends Resource
                     ->afterStateUpdated(function ($state, callable $set) {
                         $set('amount', null);
                         $set('promo', null);
-                        $set('selected_game_id', $state);
                     }),
                 Select::make('amount') 
                     ->label('Amount')
@@ -61,7 +60,6 @@ class PromoCodeResource extends Resource
                         if ($state) {
                             $subTariff = \App\Models\SubTariff::where('amount', $state)->first();
                             $set('price', $subTariff ? $subTariff->price : null);
-                            $set('selected_amount', $state);
                         } else {
                             $set('price', null);
                         }
@@ -70,21 +68,24 @@ class PromoCodeResource extends Resource
                     ->label('Promo')
                     ->disabled(fn ($get) => !$get('amount'))
                     ->reactive()
-                    ->afterStateUpdated(function ($state, callable $set) {
+                    ->afterStateUpdated(function ($state, callable $set, $get) {
                         if ($state) {
                             $records = explode("\n", $state);
+                            $gameId = $get('game_id');
+                            $amount = $get('amount');
+                            $price = $get('price');
                             foreach ($records as $record) {
-                                // Assuming there's a method to create a new promo code record
-                                // This is a placeholder for the actual logic to create a new record
-                                PromoCode::create(['promo' => $record, 'game_id' => $set('selected_game_id'), 'amount' => $set('selected_amount')]);
+                                PromoCode::create([
+                                    'game_id' => $gameId,
+                                    'amount' => $amount,
+                                    'price' => $price,
+                                    'promo' => trim($record)
+                                ]);
                             }
-                        } else {
-                            $set('promo', null);
                         }
+                        $set('promo', null);
                     }),
                 Forms\Components\Hidden::make('price'),
-                Forms\Components\Hidden::make('selected_game_id'),
-                Forms\Components\Hidden::make('selected_amount'),
             ]);
     }
 
