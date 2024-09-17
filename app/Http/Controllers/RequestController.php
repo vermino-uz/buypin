@@ -12,7 +12,7 @@ class RequestController extends Controller
 {
     /**
      * @OA\Get(
-     *     path="/api/requests/{user_id}",
+     *     path="/api/history/{user_id}",
      *     summary="Get requests by user ID",
      *     tags={"Requests"},
      *     @OA\Parameter(
