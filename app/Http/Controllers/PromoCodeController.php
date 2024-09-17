@@ -14,7 +14,7 @@ class PromoCodeController extends Controller
    /**
      * @OA\Get(
      *     path="/api/prices",
-     *     summary="Get all promo codes",
+     *     summary="Get prices of tariffs by games",
      *     tags={"Prices"},
      *     @OA\Response(
      *         response=200,
@@ -60,6 +60,16 @@ class PromoCodeController extends Controller
      *         response=200,
      *         description="Successful operation",
      *         @OA\JsonContent(ref="#/components/schemas/PromoCode")
+     *     ),
+     *     @OA\Response(
+     *         response=402,
+     *         description="Payment required",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             properties={
+     *                 @OA\Property(property="error", type="string", description="Error message")
+     *             }
+     *         )
      *     )
      * )
      */
