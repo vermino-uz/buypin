@@ -41,6 +41,7 @@ class RequestResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('game'),
+                TextColumn::make('user_id'),
                 TextColumn::make('tariff'),
                 TextColumn::make('price')
                     ->formatStateUsing(fn ($state) => number_format($state, 2) . " $")
