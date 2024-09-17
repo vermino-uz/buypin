@@ -26,7 +26,32 @@ class PriceByIdResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Select::make('game_id')
+                ->label('Game')
+                ->options(Game::all()->pluck('game_name', 'id'))
+                ->reactive()
+                ->afterStateUpdated(function ($state, callable $set) {
+                    $set('tariff_name', null);
+                    $set('price', null);
+                }),
+            Forms\Components\TextInput::make('tariff_name')
+                ->label('Tariff Name')
+                ->required()
+                ->visible(fn (callable $get) => $get('game_id') !== null)
+                ->reactive()
+                ->afterStateUpdated(function ($state, callable $set) {
+                    if ($state) {
+                        $amount = preg_replace('/[^0-9]/', '', $state);
+                        $set('amount', $amount ? (int)$amount : null);
+                    }
+                }),
+            Forms\Components\TextInput::make('price')
+                ->label('Price')
+                ->required()
+                ->numeric()
+                ->suffix('$')
+                ->visible(fn (callable $get) => $get('game_id') !== null),
+                Forms\Components\Hidden::make('amount'),
             ]);
     }
 
