@@ -20,6 +20,7 @@ class PriceByIdResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationLabel = 'ID Tariflari';
+    protected static ?string $navigationGroup = "O'yinlar va Tariflar";
     protected static ?string $navigationParentItem = "O'yinlar";
     public static function form(Form $form): Form
     {
