@@ -8,22 +8,6 @@ use OpenApi\Annotations as OA;
 
 class TariffController extends Controller
 {
-    /**
-     * @OA\Post(
-     *     path="/game-tariffs",
-     *     summary="Get tariffs by game",
-     *     tags={"Tariffs"},
-     *     @OA\RequestBody(
-     *         required=true,
-     *         @OA\JsonContent(ref="tariffs")
-     *     ),
-     *     @OA\Response(
-     *         response=200,
-     *         description="Successful operation",
-     *         @OA\JsonContent(type="array", @OA\Items(ref="tariffs"))
-     *     )
-     * )
-     */
     public function getTariffsByGame(Request $request)
     {
         // Validate the incoming request

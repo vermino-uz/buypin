@@ -16,7 +16,7 @@ Route::get('history/{user_id}', [RequestController::class, 'show']);
 Route::post('create-request', [RequestController::class, 'store']);
 Route::apiResource('users', BotUserController::class);
 Route::apiResource('games', GameController::class);
-Route::post('game-tariffs', [TariffController::class, 'getTariffsByGame']);
+// Route::post('game-tariffs', [TariffController::class, 'getTariffsByGame']);
 Route::get('banners', [BannerController::class, 'index']);
 Route::get('banners/{id}', [BannerController::class, 'show']);
 Route::get('bonuses', [BonusController::class, 'index']);
