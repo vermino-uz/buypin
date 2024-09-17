@@ -12,7 +12,7 @@ class RequestController extends Controller
 {
     /**
      * @OA\Get(
-     *     path="/requests/{id}",
+     *     path="/requests/",
      *     summary="Get all requests",
      *     tags={"Requests"},
      *     @OA\Response(
