@@ -67,7 +67,7 @@ class PromoCodeController extends Controller
      *         @OA\JsonContent(
      *             type="object",
      *             properties={
-     *                 @OA\Property(property="error", type="string", description="Error message")
+     *                 @OA\Property(property="error", type="Infuccient balance", description="Error message")
      *             }
      *         )
      *     )
