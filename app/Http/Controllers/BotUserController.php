@@ -75,7 +75,7 @@ class BotUserController extends Controller
     public function show($id)
     {
         $botUser = BotUser::where(['user_id'=>$id])->first();
-        $botUser = null;
+        // $botUser = null;
         if (!$botUser) {
             return response()->json(['message' => 'User not found'], 404);
         }
