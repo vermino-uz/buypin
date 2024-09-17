@@ -30,9 +30,9 @@ class RequestController extends Controller
      * )
      */
     // List requests by user ID
-    public function index($id)
+    public function index($user_id)
     {
-        $requests = Request::where('user_id', $id)->get();
+        $requests = Request::where('user_id', $user_id)->get();
         return response()->json($requests, 200);
     }
     /**
