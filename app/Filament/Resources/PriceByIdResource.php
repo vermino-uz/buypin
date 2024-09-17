@@ -48,7 +48,11 @@ class PriceByIdResource extends Resource
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ])
-            ->groupBy('game_id');
+            ->groups([
+                'game_id',
+            ])
+            ->defaultGroup('game_id')
+            ->groupsOnly();
     }
 
     public static function getRelations(): array
