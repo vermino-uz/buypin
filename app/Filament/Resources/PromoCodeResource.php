@@ -19,7 +19,7 @@ use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-
+use Filament\Forms\Components\Textarea;
 class PromoCodeResource extends Resource
 {
     protected static ?string $model = PromoCode::class;
@@ -64,9 +64,8 @@ class PromoCodeResource extends Resource
                             $set('price', null);
                         }
                     }),
-                TextInput::make('promo')
+                Textarea::make('promo')
                     ->label('Promo')
-                    ->textarea()
                     ->disabled(fn ($get) => !$get('amount'))
                     ->reactive()
                     ->afterStateUpdated(function ($state, callable $set) {
