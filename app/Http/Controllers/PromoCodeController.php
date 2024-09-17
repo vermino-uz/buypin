@@ -113,7 +113,7 @@ class PromoCodeController extends Controller
      * @OA\Get(
      *     path="/api/prices/{game_id}",
      *     summary="Get prices by game ID",
-     *     tags={"Promo Codes"},
+     *     tags={"Prices"},
      *     @OA\Parameter(
      *         name="game_id",
      *         in="path",
