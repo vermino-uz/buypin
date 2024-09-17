@@ -72,7 +72,9 @@ class PromoCodeResource extends Resource
                         if ($state) {
                             $records = explode("\n", $state);
                             foreach ($records as $record) {
-                                $set('promo', $record);
+                                // Assuming there's a method to create a new promo code record
+                                // This is a placeholder for the actual logic to create a new record
+                                PromoCode::create(['promo' => $record]);
                             }
                         } else {
                             $set('promo', null);
