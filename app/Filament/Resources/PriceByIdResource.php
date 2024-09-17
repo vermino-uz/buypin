@@ -51,7 +51,7 @@ class PriceByIdResource extends Resource
             ->groups([
                 'game_id',
             ])
-            ->defaultGroup('game_id')->collapsed();
+            ->defaultGroup('game_id')->collapsible();
     }
 
     public static function getRelations(): array
