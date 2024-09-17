@@ -30,7 +30,7 @@ class RequestController extends Controller
      * )
      */
     // List requests by user ID
-    public function index($user_id)
+    public function show($user_id)
     {
         $requests = Request::where('user_id', $user_id)->get();
         return response()->json($requests, 200);
@@ -82,11 +82,11 @@ class RequestController extends Controller
     }
 
     // Show a specific request
-    public function show($id)
-    {
-        $request = Request::findOrFail($id);
-        return response()->json($request, 200);
-    }
+    // public function show($id)
+    // {
+    //     $request = Request::findOrFail($id);
+    //     return response()->json($request, 200);
+    // }
 
     // Update a specific request
     public function update(HttpRequest $request, $id)
