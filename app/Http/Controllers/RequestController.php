@@ -12,9 +12,16 @@ class RequestController extends Controller
 {
     /**
      * @OA\Get(
-     *     path="/requests/",
-     *     summary="Get all requests",
+     *     path="/requests/{user_id}",
+     *     summary="Get requests by user ID",
      *     tags={"Requests"},
+     *     @OA\Parameter(
+     *         name="user_id",
+     *         in="path",
+     *         required=true,
+     *         description="User ID",
+     *         @OA\Schema(type="integer")
+     *     ),
      *     @OA\Response(
      *         response=200,
      *         description="Successful operation",
@@ -22,7 +29,7 @@ class RequestController extends Controller
      *     )
      * )
      */
-    // List all requests
+    // List requests by user ID
     public function index($id)
     {
         $requests = Request::where('user_id', $id)->get();

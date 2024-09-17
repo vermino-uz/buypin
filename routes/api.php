@@ -12,7 +12,7 @@ use App\Http\Controllers\RequestController;
 use App\Models\Bonus;
 use App\Http\Controllers\PromoCodeController;
 
-Route::apiResource('requests/{id}', RequestController::class);
+Route::get('requests/{id}', [RequestController::class, 'index']);
 Route::post('requests', [RequestController::class, 'store']);
 Route::apiResource('users', BotUserController::class);
 Route::apiResource('games', GameController::class);
