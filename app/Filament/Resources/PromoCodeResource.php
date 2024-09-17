@@ -65,36 +65,9 @@ class PromoCodeResource extends Resource
                             $set('price', null);
                         }
                     }),
-                Textarea::make('promo')
-                    ->label('Promo')
-                    ->disabled(fn ($get) => !$get('amount'))
-                    ->reactive()
-                    ->helperText('Enter one promo code per line'),
-                Forms\Components\Hidden::make('price'),
-                Forms\Components\Actions::make([
-                    Forms\Components\Actions\Action::make('create')
-                        ->label('Create')
-                        ->action(function (array $data, callable $set) {
-                            $promos = explode("\n", $data['promo']);
-                            foreach ($promos as $promo) {
-                                $trimmedPromo = trim($promo);
-                                if (!empty($trimmedPromo)) {
-                                    PromoCode::create([
-                                        'game_id' => $data['game_id'],
-                                        'amount' => $data['amount'],
-                                        'price' => $data['price'],
-                                        'promo' => $trimmedPromo
-                                    ]);
-                                }
-                            }
-                            $set('promo', null);
-                            Notification::make()
-                                ->title('Promo codes created successfully')
-                                ->success()
-                                ->send();
-                        })
-                        ->disabled(fn ($get) => !$get('game_id') || !$get('amount') || !$get('promo'))
-                ]),
+                
+            
+            
             ]);
     }
 
