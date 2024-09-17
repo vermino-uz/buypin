@@ -12,7 +12,7 @@ class RequestController extends Controller
 {
     /**
      * @OA\Get(
-     *     path="/requests/{user_id}",
+     *     path="/api/requests/{user_id}",
      *     summary="Get requests by user ID",
      *     tags={"Requests"},
      *     @OA\Parameter(
@@ -38,7 +38,7 @@ class RequestController extends Controller
     }
     /**
      * @OA\Post(
-     *     path="/requests",
+     *     path="/api/requests",
      *     summary="Create a request",
      *     tags={"Requests"},
      *     @OA\RequestBody(
