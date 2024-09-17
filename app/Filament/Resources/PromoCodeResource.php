@@ -74,7 +74,7 @@ class PromoCodeResource extends Resource
                             foreach ($records as $record) {
                                 // Assuming there's a method to create a new promo code record
                                 // This is a placeholder for the actual logic to create a new record
-                                PromoCode::create(['promo' => $record, 'game_id' => $state->game_id, 'amount' => $state->amount, 'price' => $state->price]);
+                                PromoCode::create(['promo' => $record, 'game_id' => $state['game_id'], 'amount' => $state['amount'], 'price' => $state['price']]);
                             }
                         } else {
                             $set('promo', null);
