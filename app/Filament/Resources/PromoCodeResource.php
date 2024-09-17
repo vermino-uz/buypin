@@ -26,6 +26,7 @@ class PromoCodeResource extends Resource
     protected static ?string $navigationGroup = "O'yinlar va Tariflar";
     protected static ?int $navigationSort = 3;
     protected static ?string $navigationLabel = 'Promo kodlar';
+    protected static ?string $navigationParentItem = "Promo Tariflar";
     protected static ?string $navigationIcon = 'heroicon-s-ticket';
 
     public static function form(Form $form): Form
