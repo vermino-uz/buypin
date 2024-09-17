@@ -13,7 +13,7 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Tables\Columns\TextColumn;
-
+use App\Models\Game;
 class PriceByIdResource extends Resource
 {
     protected static ?string $model = PriceById::class;
@@ -34,9 +34,7 @@ class PriceByIdResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('id'),
                 Tables\Columns\TextColumn::make('price'),
-                Tables\Columns\TextColumn::make('amount')->getStateUsing(function ($record) {
-                    return $record->amount . ' ' . $record->game->currency;
-                }),
+                Tables\Columns\TextColumn::make('amount')->formatUsing(fn($record): string => $record->amount . ' ' . Game::find($record->game_id)->currency),
                 Tables\Columns\TextColumn::make('game_id'),
             ])
             ->filters([
