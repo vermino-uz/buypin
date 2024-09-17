@@ -17,6 +17,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
+use Filament\Notifications\Notification;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\Textarea;
@@ -67,7 +68,8 @@ class PromoCodeResource extends Resource
                 Textarea::make('promo')
                     ->label('Promo')
                     ->disabled(fn ($get) => !$get('amount'))
-                    ->reactive(),
+                    ->reactive()
+                    ->helperText('Enter one promo code per line'),
                 Forms\Components\Hidden::make('price'),
                 Forms\Components\Hidden::make('create_records')
                     ->default(true)
@@ -79,15 +81,22 @@ class PromoCodeResource extends Resource
                             if ($data['create_records']) {
                                 $promos = explode("\n", $data['promo']);
                                 foreach ($promos as $promo) {
-                                    PromoCode::create([
-                                        'game_id' => $data['game_id'],
-                                        'amount' => $data['amount'],
-                                        'price' => $data['price'],
-                                        'promo' => trim($promo)
-                                    ]);
+                                    $trimmedPromo = trim($promo);
+                                    if (!empty($trimmedPromo)) {
+                                        PromoCode::create([
+                                            'game_id' => $data['game_id'],
+                                            'amount' => $data['amount'],
+                                            'price' => $data['price'],
+                                            'promo' => $trimmedPromo
+                                        ]);
+                                    }
                                 }
                                 $set('promo', null);
                                 $set('create_records', false);
+                                Notification::make()
+                                    ->title('Promo codes created successfully')
+                                    ->success()
+                                    ->send();
                             }
                         })
                 ]),
