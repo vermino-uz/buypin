@@ -67,25 +67,30 @@ class PromoCodeResource extends Resource
                 Textarea::make('promo')
                     ->label('Promo')
                     ->disabled(fn ($get) => !$get('amount'))
-                    ->reactive()
-                    ->afterStateUpdated(function ($state, callable $set, $get) {
-                        if ($state) {
-                            $records = explode("\n", $state);
-                            $gameId = $get('game_id');
-                            $amount = $get('amount');
-                            $price = $get('price');
-                            foreach ($records as $record) {
-                                PromoCode::create([
-                                    'game_id' => $gameId,
-                                    'amount' => $amount,
-                                    'price' => $price,
-                                    'promo' => trim($record)
-                                ]);
-                            }
-                        }
-                        $set('promo', null);
-                    }),
+                    ->reactive(),
                 Forms\Components\Hidden::make('price'),
+                Forms\Components\Hidden::make('create_records')
+                    ->default(true)
+                    ->dehydrated(false),
+                Forms\Components\Actions::make([
+                    Forms\Components\Actions\Action::make('save')
+                        ->label('Save')
+                        ->action(function (array $data, callable $set) {
+                            if ($data['create_records']) {
+                                $promos = explode("\n", $data['promo']);
+                                foreach ($promos as $promo) {
+                                    PromoCode::create([
+                                        'game_id' => $data['game_id'],
+                                        'amount' => $data['amount'],
+                                        'price' => $data['price'],
+                                        'promo' => trim($promo)
+                                    ]);
+                                }
+                                $set('promo', null);
+                                $set('create_records', false);
+                            }
+                        })
+                ]),
             ]);
     }
 
