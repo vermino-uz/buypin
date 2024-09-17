@@ -71,34 +71,29 @@ class PromoCodeResource extends Resource
                     ->reactive()
                     ->helperText('Enter one promo code per line'),
                 Forms\Components\Hidden::make('price'),
-                Forms\Components\Hidden::make('create_records')
-                    ->default(true)
-                    ->dehydrated(false),
                 Forms\Components\Actions::make([
-                    Forms\Components\Actions\Action::make('save')
-                        ->label('Save')
+                    Forms\Components\Actions\Action::make('create')
+                        ->label('Create')
                         ->action(function (array $data, callable $set) {
-                            if ($data['create_records']) {
-                                $promos = explode("\n", $data['promo']);
-                                foreach ($promos as $promo) {
-                                    $trimmedPromo = trim($promo);
-                                    if (!empty($trimmedPromo)) {
-                                        PromoCode::create([
-                                            'game_id' => $data['game_id'],
-                                            'amount' => $data['amount'],
-                                            'price' => $data['price'],
-                                            'promo' => $trimmedPromo
-                                        ]);
-                                    }
+                            $promos = explode("\n", $data['promo']);
+                            foreach ($promos as $promo) {
+                                $trimmedPromo = trim($promo);
+                                if (!empty($trimmedPromo)) {
+                                    PromoCode::create([
+                                        'game_id' => $data['game_id'],
+                                        'amount' => $data['amount'],
+                                        'price' => $data['price'],
+                                        'promo' => $trimmedPromo
+                                    ]);
                                 }
-                                $set('promo', null);
-                                $set('create_records', false);
-                                Notification::make()
-                                    ->title('Promo codes created successfully')
-                                    ->success()
-                                    ->send();
                             }
+                            $set('promo', null);
+                            Notification::make()
+                                ->title('Promo codes created successfully')
+                                ->success()
+                                ->send();
                         })
+                        ->disabled(fn ($get) => !$get('game_id') || !$get('amount') || !$get('promo'))
                 ]),
             ]);
     }
