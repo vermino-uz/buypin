@@ -40,34 +40,6 @@ class PromoCodeController extends Controller
     }
 
     /**
- * @OA\Post(
- *     path="/api/promo-codes",
- *     summary="Store a new promo code",
- *     tags={"Promo Codes"},
- *     @OA\RequestBody(
- *         @OA\JsonContent(
- *             type="object",
- *             @OA\Property(property="user_id", type="integer"),
- *             @OA\Property(property="game_id", type="integer"),
- *             @OA\Property(property="amount", type="integer")
- *         )
- *     ),
- *     @OA\Response(
- *         response=200,
- *         description="Promo code stored successfully"
- *     ),
- *     @OA\Response(
- *         response=404,
- *         description="Promo code not found"
- *     )
- * )
- */
-    public function store(Request $request)
-    {
-        #not allowed response 
-        return response()->json(['message' => 'Not allowed'], 403);
-    }
-    /**
      * @OA\Post(
      *     path="/api/promo-codes/get-promo-code",
      *     summary="Get a promo code",
