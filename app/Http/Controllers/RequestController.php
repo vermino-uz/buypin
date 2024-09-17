@@ -37,7 +37,7 @@ class RequestController extends Controller
     }
     /**
      * @OA\Post(
-     *     path="/api/requests",
+     *     path="/api/create-request",
      *     summary="Create a request",
      *     tags={"Requests"},
      *     @OA\RequestBody(
