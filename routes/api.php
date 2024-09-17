@@ -23,7 +23,7 @@ Route::get('bonuses', [BonusController::class, 'index']);
 Route::get('bonuses/{id}', [BonusController::class, 'show']);
 Route::get('prices', [PromoCodeController::class, 'index']);
 Route::get('prices/{game_id}', [PromoCodeController::class, 'show']);
-Route::post('promo-codes/get-promo-code', [PromoCodeController::class, 'getPromoCode']);
+Route::post('promo-code', [PromoCodeController::class, 'getPromoCode']);
 Route::get('bonuses/get/{promo}', [BonusController::class, 'getBonusByPromo']);
 
 Route::post('telegram/webhook', [TelegramController::class, 'webhook']);
