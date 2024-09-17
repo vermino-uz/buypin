@@ -65,7 +65,27 @@ class PromoCodeResource extends Resource
                             $set('price', null);
                         }
                     }),
-                
+                Textarea::make('promo')
+                    ->label('Promo Codes')
+                    ->required()
+                    ->helperText('Enter each promo code on a new line. Multiple codes will create separate records.')
+                    ->rows(5),
+                Forms\Components\Hidden::make('promo_codes')
+                    ->afterStateHydrated(function (Forms\Get $get, Forms\Set $set) {
+                        $promoText = $get('promo');
+                        $promoCodes = array_filter(explode("\n", $promoText));
+                        $gameId = $get('game_id');
+                        $amount = $get('amount');
+                        $price = $get('price');
+                        $set('promo_codes', array_map(function($code) use ($gameId, $amount, $price) {
+                            return [
+                                'game_id' => $gameId,
+                                'amount' => $amount,
+                                'price' => $price,
+                                'promo' => trim($code),
+                            ];
+                        }, $promoCodes));
+                    }),
             
             
             ]);
