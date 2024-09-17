@@ -73,7 +73,7 @@ class PromoCodeController extends Controller
      *     ),
      *     @OA\Response(
      *         response=404,
-     *         description="Resource not found",
+     *         description="Promocode not found",
      *         @OA\JsonContent(
      *             type="object",
      *             properties={
