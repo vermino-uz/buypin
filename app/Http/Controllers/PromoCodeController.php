@@ -59,7 +59,17 @@ class PromoCodeController extends Controller
      *     @OA\Response(
      *         response=200,
      *         description="Successful operation",
-     *         @OA\JsonContent(ref="#/components/schemas/PromoCode")
+     *         @OA\JsonContent(
+     *             type="object",
+     *             properties={
+     *                 @OA\Property(property="id", type="integer", description="ID"),
+     *                 @OA\Property(property="game_id", type="integer", description="Game ID"),
+     *                 @OA\Property(property="amount", type="integer", description="Amount"),
+     *                 @OA\Property(property="price", type="number", description="Price"),
+     *                 @OA\Property(property="tariff_id", type="integer", description="Tariff ID"),
+     *                 @OA\Property(property="user_id", type="integer", description="User ID"),
+     *             }
+     *         )
      *     ),
      *     @OA\Response(
      *         response=402,
