@@ -65,6 +65,18 @@ class PromoCodeResource extends Resource
                             $set('price', null);
                         }
                     }),
+                TextInput::make('price')
+                    ->label('Price')
+                    ->hidden(fn ($get) => !$get('game_id'))
+                    ->reactive()
+                    ->afterStateUpdated(function ($state, callable $set) {
+                        if ($state) {
+                            $subTariff = \App\Models\SubTariff::where('price', $state)->first();
+                            $set('amount', $subTariff ? $subTariff->amount : null);
+                        } else {
+                            $set('amount', null);
+                        }
+                    }),
                 Textarea::make('promo')
                     ->label('Promo Codes')
                     ->required()
