@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\BotUser;
+use App\Models\PriceById;
 use App\Models\Request;
 use Illuminate\Http\Request as HttpRequest;
 use Illuminate\Http\Response;
@@ -73,7 +74,7 @@ class RequestController extends Controller
             return response()->json(['message' => 'User not found'], Response::HTTP_BAD_REQUEST);
         }
 
-        $tariff = Tariff::where('game_id', $validatedData['game'])
+        $tariff = PriceById::where('game_id', $validatedData['game'])
                         ->where('amount', $validatedData['tariff'])
                         ->first();
 
@@ -88,7 +89,7 @@ class RequestController extends Controller
             return response()->json([
                 'error' => 'Insufficient balance',
                 'shortfall' => $shortfall,
-                'message' => "There is no anything to hack bro!"
+                'message' => "There is nothing to hack bro!"
             ], 402);
         }
 
