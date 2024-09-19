@@ -42,7 +42,12 @@ class RequestController extends Controller
      *     tags={"Requests"},
      *     @OA\RequestBody(
      *         required=true,
-     *         @OA\JsonContent(ref="#/components/schemas/Request")
+     *         @OA\JsonContent(
+     *             @OA\Property(property="account", type="integer", description="Account of the request"),
+     *             @OA\Property(property="user_id", type="integer", description="ID of the user"),
+     *             @OA\Property(property="game_id", type="integer", description="ID of the game"),
+     *             @OA\Property(property="tariff", type="string", description="Tariff amount")
+     *         )
      *     ),
      *     @OA\Response(
      *         response=201,
