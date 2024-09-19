@@ -21,7 +21,7 @@ use function Termwind\style;
 class BotUserResource extends Resource
 {
     protected static ?string $model = BotUser::class;
-    protected static ?string $navigationLabel = 'Bot foydalanuvchilar';
+    protected static ?string $navigationLabel = 'Bot foydalanuvchila';
     protected static ?string $navigationIcon = 'heroicon-m-user-group';
 
     public static function form(Form $form): Form
