@@ -49,10 +49,7 @@ class RequestResource extends Resource
                     ->color('success'),
                 TextColumn::make('account')->copyable()->copyMessage('Account ID copied')->copyMessageDuration(1500)->badge(
                 ),
-                SelectColumn::make('is_fulfilled')->options([
-                    1=>"To'lab berildi",
-                    0=>"To'langani yo'q",
-                ])
+                ToggleColumn::make('is_fulfilled'),
             ])
             ->filters([
                 SelectFilter::make('is_fulfilled')
