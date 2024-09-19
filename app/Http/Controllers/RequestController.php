@@ -68,18 +68,32 @@ class RequestController extends Controller
         ]);
         
         // Check if the user has sufficient balance
-        $user = BotUser::where(['user_id'=>$validatedData['user_id']])->first();
+        $user = BotUser::where('user_id', $validatedData['user_id'])->first();
         if (!$user) {
-        return response()->json(['message'=> 'User not found'], Response::HTTP_BAD_REQUEST);
+            return response()->json(['message' => 'User not found'], Response::HTTP_BAD_REQUEST);
         }
-        if ($user->balance < $validatedData['price']) {
-            $shortfall = $validatedData['price'] - $user->balance;
+
+        $tariff = Tariff::where('game_id', $validatedData['game'])
+                        ->where('amount', $validatedData['tariff'])
+                        ->first();
+
+        if (!$tariff) {
+            return response()->json(['message' => 'Tariff not found'], Response::HTTP_BAD_REQUEST);
+        }
+
+        $price = $tariff->price;
+
+        if ($user->balance < $price) {
+            $shortfall = $price - $user->balance;
             return response()->json([
                 'error' => 'Insufficient balance',
-                'shortfall'=>$shortfall,
-                'message'=>"There is no anything to hack bro!"
+                'shortfall' => $shortfall,
+                'message' => "There is no anything to hack bro!"
             ], 402);
         }
+
+        // Add price to validatedData for creating the request
+        $validatedData['price'] = $price;
 
         // If balance is sufficient, create the request
         $newRequest = Request::create($validatedData);
