@@ -45,8 +45,8 @@ class RequestController extends Controller
      *         @OA\JsonContent(
      *             @OA\Property(property="account", type="integer", description="Account of the request"),
      *             @OA\Property(property="user_id", type="integer", description="ID of the user"),
-     *             @OA\Property(property="game_id", type="integer", description="ID of the game"),
-     *             @OA\Property(property="tariff", type="string", description="Tariff amount")
+     *             @OA\Property(property="game", type="integer", description="ID of the game"),
+     *             @OA\Property(property="tariff", type="integer", description="Tariff amount")
      *         )
      *     ),
      *     @OA\Response(
@@ -61,12 +61,10 @@ class RequestController extends Controller
     {
 
         $validatedData = $request->validate([
-            'user_id' => 'required|integer',
-            'game' => 'required|string|max:255',
-            'tariff' => 'required|string|max:255',
-            'price' => 'required|integer',
-            'account' => 'required|integer',
-            'is_fulfilled' => 'required|string',
+            'user_id' => 'required|integer|exists:bot_users,user_id',
+            'game' => 'required|string|max:255||exists:games,game',
+            'tariff' => 'required|string|max:255||exists:tariffs,tariff',
+            'account' => 'required|integer|min:1',
         ]);
         
         // Check if the user has sufficient balance
