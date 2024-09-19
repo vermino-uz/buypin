@@ -7,7 +7,7 @@ use App\Models\Request;
 use Illuminate\Http\Request as HttpRequest;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Log;
-
+use App\Models\Tariff;
 class RequestController extends Controller
 {
     /**
