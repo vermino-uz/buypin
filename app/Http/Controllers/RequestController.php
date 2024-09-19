@@ -63,8 +63,12 @@ class RequestController extends Controller
             'account' => 'required|integer',
             'is_fulfilled' => 'required|string',
         ]);
+        
         // Check if the user has sufficient balance
         $user = BotUser::where(['user_id'=>$validatedData['user_id']])->first();
+        if (!$user) {
+        return response()->json(['message'=> 'User not found'], Response::HTTP_BAD_REQUEST);
+        }
         if ($user->balance < $validatedData['price']) {
             $shortfall = $validatedData['price'] - $user->balance;
             return response()->json([
