@@ -48,8 +48,8 @@ class RequestResource extends Resource
                     ->badge()
                     ->color('success'),
                 TextColumn::make('account')->copyable()->copyMessage('Account ID copied')->copyMessageDuration(1500)->badge(
-                ),
-                ToggleColumn::make('is_fulfilled'),
+                )->label("Account ID"),
+                ToggleColumn::make('is_fulfilled')->label("To'lab berildi"),
             ])
             ->filters([
                 SelectFilter::make('is_fulfilled')
