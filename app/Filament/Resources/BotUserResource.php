@@ -43,7 +43,7 @@ class BotUserResource extends Resource
                     ->label('Profile Picture')
                     ->circular(),
                 TextColumn::make('full_name'),
-                TextColumn::make('user_id'),
+                TextColumn::make('user_id')->copyable(),
                 TextColumn::make('balance')->badge()->color(fn(BotUser $record): string => $record->balance == 0.00 ? 'danger' : 'success')->formatStateUsing(fn(BotUser $record): string => number_format($record->balance, 2) . ' $'),
                 TextColumn::make('coin')->numeric(),
                 TextColumn::make('language')
