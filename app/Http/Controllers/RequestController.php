@@ -54,6 +54,29 @@ class RequestController extends Controller
      *         response=201,
      *         description="Request created",
      *         @OA\JsonContent(ref="#/components/schemas/Request")
+     *     ),
+     *     @OA\Response(
+     *         response=400,
+     *         description="Bad request",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="message", type="string", example="Validation error")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=402,
+     *         description="Insufficient balance",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="error", type="string", example="Insufficient balance"),
+     *             @OA\Property(property="shortfall", type="number", example="10.50"),
+     *             @OA\Property(property="message", type="string", example="There is nothing to hack bro!")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Internal server error",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="message", type="string", example="Failed to update user balance")
+     *         )
      *     )
      * )
      */
