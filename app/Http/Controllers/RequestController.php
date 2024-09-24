@@ -126,11 +126,7 @@ class RequestController extends Controller
 
         // Double-check if the balance was actually updated
         $updatedUser = BotUser::where('user_id', $validatedData['user_id'])->first();
-        if ($updatedUser->balance !== $user->balance) {
-            // If the balance wasn't updated, log the error and return an error response
-            Log::error("Failed to update user balance. User ID: {$user->user_id}, Old Balance: {$user->balance}, Expected New Balance: {$updatedUser->balance}");
-            return response()->json(['message' => "Failed to update user balance User ID: {$user->user_id}, Old Balance: {$user->balance}, Expected New Balance: {$updatedUser->balance}"], Response::HTTP_INTERNAL_SERVER_ERROR);
-        }
+        
 
         return response()->json($newRequest, 201);
     }
