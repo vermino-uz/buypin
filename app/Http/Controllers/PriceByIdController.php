@@ -16,7 +16,7 @@ class PriceByIdController extends Controller
      *     @OA\Response(
      *         response=200,
      *         description="Successful operation",
-     *         @OA\JsonContent(type="array", @OA\Items(ref="#/components/schemas/PriceById"))
+     *         @OA\JsonContent(type="array", @OA\Items(ref="#/components/schemas/PromoCode"))
      *     )
      * )
      */
@@ -50,7 +50,7 @@ class PriceByIdController extends Controller
      *     @OA\Response(
      *         response=200,
      *         description="Successful operation",
-     *         @OA\JsonContent(type="array", @OA\Items(ref="#/components/schemas/PriceById"))
+     *         @OA\JsonContent(type="array", @OA\Items(ref="#/components/schemas/PromoCode"))
      *     )
      * )
      */
