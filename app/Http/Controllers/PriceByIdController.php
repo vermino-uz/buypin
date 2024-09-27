@@ -8,6 +8,65 @@ use App\Models\BotUser;
 
 class PriceByIdController extends Controller
 {
+    /**
+     * @OA\Get(
+     *     path="/api/prices-by-id",
+     *     summary="Get prices of tariffs by games",
+     *     tags={"Prices"},
+     *     @OA\Response(
+     *         response=200,
+     *         description="Successful operation",
+     *         @OA\JsonContent(type="array", @OA\Items(ref="#/components/schemas/PriceById"))
+     *     )
+     * )
+     */
+    public function index()
+    {
+        $games = \App\Models\Game::select('id', 'game_name')->get();
+
+        foreach ($games as $game) {
+            $prices = PriceById::where('game_id', $game->id)
+                ->select('amount', 'price')
+                ->groupBy('amount', 'price')
+                ->get();
+            $game->prices = $prices;
+        }
+
+        return response()->json($games, 200);
+    }
+
+    /**
+     * @OA\Get(
+     *     path="/api/prices-by-id/{game_id}",
+     *     summary="Get prices of tariffs by game ID",
+     *     tags={"Prices"},
+     *     @OA\Parameter(
+     *         name="game_id",
+     *         in="path",
+     *         required=true,
+     *         description="Game ID",
+     *         @OA\Schema(type="integer")
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="Successful operation",
+     *         @OA\JsonContent(type="array", @OA\Items(ref="#/components/schemas/PriceById"))
+     *     )
+     * )
+     */
+    public function show($game_id)
+    {
+        $prices = PriceById::where('game_id', $game_id)
+            ->select('amount', 'price')
+            ->groupBy('amount', 'price')
+            ->get();
+
+        if ($prices->isEmpty()) {
+            return response()->json(['message' => 'No prices found for this game'], 404);
+        }
+
+        return response()->json($prices, 200);
+    }
     public function store(HttpRequest $request)
     {
 

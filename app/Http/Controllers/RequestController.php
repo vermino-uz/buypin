@@ -86,7 +86,7 @@ class RequestController extends Controller
         $validatedData = $request->validate([
             'user_id' => 'required|integer|exists:bot_users,user_id',
             'game' => 'required|integer|max:255||exists:games,id',
-            'tariff' => 'required|integer|max:255||exists:price_by_ids,amount',
+            'tariff' => 'required|integer|exists:price_by_ids,amount',
             'account' => 'required|integer|min:1',
         ]);
         
