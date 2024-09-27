@@ -44,15 +44,12 @@ class RequestResource extends Resource
                 TextColumn::make('user_id')->copyable(),
                 TextColumn::make('tariff'),
                 TextColumn::make('price')
-                    ->formatStateUsing(fn ($state) => number_format($state, 2) . " $")
+                    ->formatStateUsing(fn ($state): string => number_format($state, 2) . " $")
                     ->badge()
                     ->color('success'),
                 TextColumn::make('account')->copyable()->copyMessage('Account ID copied')->copyMessageDuration(1500)->badge(
-                ),
-                SelectColumn::make('is_fulfilled')->options([
-                    1=>"To'lab berildi",
-                    0=>"To'langani yo'q",
-                ])
+                )->label("Account ID"),
+                ToggleColumn::make('is_fulfilled')->label("To'lab berildi"),
             ])
             ->filters([
                 SelectFilter::make('is_fulfilled')

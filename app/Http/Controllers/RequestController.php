@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\BotUser;
+use App\Models\PriceById;
 use App\Models\Request;
 use Illuminate\Http\Request as HttpRequest;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Log;
-
+use App\Models\Tariff;
 class RequestController extends Controller
 {
     /**
@@ -42,42 +43,91 @@ class RequestController extends Controller
      *     tags={"Requests"},
      *     @OA\RequestBody(
      *         required=true,
-     *         @OA\JsonContent(ref="#/components/schemas/Request")
+     *         @OA\JsonContent(
+     *             @OA\Property(property="account", type="integer", description="Account of the request"),
+     *             @OA\Property(property="user_id", type="integer", description="ID of the user"),
+     *             @OA\Property(property="game", type="integer", description="ID of the game"),
+     *             @OA\Property(property="tariff", type="integer", description="Tariff amount")
+     *         )
      *     ),
      *     @OA\Response(
      *         response=201,
      *         description="Request created",
      *         @OA\JsonContent(ref="#/components/schemas/Request")
+     *     ),
+     *     @OA\Response(
+     *         response=400,
+     *         description="Bad request",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="message", type="string", example="Validation error")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=402,
+     *         description="Insufficient balance",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="error", type="string", example="Insufficient balance"),
+     *             @OA\Property(property="shortfall", type="number", example="10.50"),
+     *             @OA\Property(property="message", type="string", example="There is nothing to hack bro!")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Internal server error",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="message", type="string", example="Failed to update user balance")
+     *         )
      *     )
      * )
      */
     // Store a new request
     public function store(HttpRequest $request)
     {
-
         $validatedData = $request->validate([
-            'user_id' => 'required|integer',
-            'game' => 'required|string|max:255',
-            'tariff' => 'required|string|max:255',
-            'price' => 'required|integer',
-            'account' => 'required|integer',
-            'is_fulfilled' => 'required|string',
+            'user_id' => 'required|integer|exists:bot_users,user_id',
+            'game' => 'required|integer|max:255||exists:games,id',
+            'tariff' => 'required|integer|max:255||exists:tariffs,amount',
+            'account' => 'required|integer|min:1',
         ]);
+        
         // Check if the user has sufficient balance
-        $user = BotUser::where(['user_id'=>$validatedData['user_id']])->first();
-        if ($user->balance < $validatedData['price']) {
-            $shortfall = $validatedData['price'] - $user->balance;
+        $user = BotUser::where('user_id', $validatedData['user_id'])->first();
+        if (!$user) {
+            return response()->json(['message' => 'User not found'], Response::HTTP_BAD_REQUEST);
+        }
+
+        $tariff = PriceById::where('game_id', $validatedData['game'])
+                        ->where('amount', $validatedData['tariff'])
+                        ->first();
+
+        if (!$tariff) {
+            return response()->json(['message' => 'Tariff not found'], Response::HTTP_BAD_REQUEST);
+        }
+
+        $price = $tariff->price;
+
+        if ($user->balance < $price) {
+            $shortfall = $price - $user->balance;
             return response()->json([
                 'error' => 'Insufficient balance',
-                'shortfall'=>$shortfall,
-                'message'=>"There is no anything to hack bro!"
+                'shortfall' => $shortfall,
+                'message' => "There is nothing to hack bro!"
             ], 402);
         }
 
-        // If balance is sufficient, create the request
-        $newRequest = Request::create($validatedData);
-        $user->balance = $user->balance - $validatedData['price'];
+        // Add price to validatedData for creating the request
+        $validatedData['price'] = $price;
+
+        // If balance is sufficient, create the request and update user balance
+        $user->balance -= $price;
         $user->save();
+
+        $newRequest = Request::create($validatedData);
+
+        // Double-check if the balance was actually updated
+        $updatedUser = BotUser::where('user_id', $validatedData['user_id'])->first();
+        
+
         return response()->json($newRequest, 201);
     }
 

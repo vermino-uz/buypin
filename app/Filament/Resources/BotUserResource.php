@@ -21,7 +21,7 @@ use function Termwind\style;
 class BotUserResource extends Resource
 {
     protected static ?string $model = BotUser::class;
-    protected static ?string $navigationLabel = 'Bot foydalanuvchilar';
+    protected static ?string $navigationLabel = 'Bot foydalanuvchila';
     protected static ?string $navigationIcon = 'heroicon-m-user-group';
 
     public static function form(Form $form): Form
@@ -43,7 +43,7 @@ class BotUserResource extends Resource
                     ->label('Profile Picture')
                     ->circular(),
                 TextColumn::make('full_name'),
-                TextColumn::make('user_id'),
+                TextColumn::make('user_id')->copyable(),
                 TextColumn::make('balance')->badge()->color(fn(BotUser $record): string => $record->balance == 0.00 ? 'danger' : 'success')->formatStateUsing(fn(BotUser $record): string => number_format($record->balance, 2) . ' $'),
                 TextColumn::make('coin')->numeric(),
                 TextColumn::make('language')
