@@ -11,6 +11,7 @@ use App\Http\Controllers\BonusController;
 use App\Models\Bonus;
 use App\Http\Controllers\PromoCodeController;
 use App\Http\Controllers\RequestController;
+use App\Http\Controllers\PriceByIdController;
 Route::get('history/{user_id}', [RequestController::class, 'show']);
 Route::post('create-request', [RequestController::class, 'store']);
 Route::apiResource('users', BotUserController::class);
@@ -24,7 +25,8 @@ Route::get('prices', [PromoCodeController::class, 'index']);
 Route::get('prices/{game_id}', [PromoCodeController::class, 'show']);
 Route::post('promo-code', [PromoCodeController::class, 'getPromoCode']);
 Route::get('bonuses/get/{promo}', [BonusController::class, 'getBonusByPromo']);
-
+Route::get('prices-by-id', [PriceByIdController::class, 'index']);
+Route::get('prices-by-id/{game_id}', [PriceByIdController::class, 'show']);
 Route::post('telegram/webhook', [TelegramController::class, 'webhook']);
 
 
