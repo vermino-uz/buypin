@@ -11,9 +11,9 @@ use App\Http\Controllers\BonusController;
 use App\Http\Controllers\RequestController;
 use App\Models\Bonus;
 use App\Http\Controllers\PromoCodeController;
-
+use App\Http\Controllers\PriceByIdController;
 Route::get('history/{user_id}', [RequestController::class, 'show']);
-Route::post('create-request', [RequestController::class, 'store']);
+Route::post('create-request', [PriceByIdController::class, 'store']);
 Route::apiResource('users', BotUserController::class);
 Route::apiResource('games', GameController::class);
 // Route::post('game-tariffs', [TariffController::class, 'getTariffsByGame']);
