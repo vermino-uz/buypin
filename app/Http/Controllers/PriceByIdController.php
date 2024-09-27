@@ -15,7 +15,6 @@ class PriceByIdController extends Controller
             'user_id' => 'required|integer',
             'game' => 'required|string|max:255',
             'tariff' => 'required|string|max:255',
-            'price' => 'required|integer',
             'account' => 'required|integer',
             'is_fulfilled' => 'required|string',
         ]);

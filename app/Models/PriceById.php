@@ -9,5 +9,5 @@ class PriceById extends Model
 {
     use HasFactory;
     protected $table = 'price_by_ids';
-    protected $fillable = ['game_id', 'amount', 'price', 'is_active'];
+    protected $fillable = ['game_id', 'amount', 'price', 'is_active'];  
 }

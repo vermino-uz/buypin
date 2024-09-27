@@ -22,6 +22,7 @@ use Illuminate\Database\Eloquent\Model;
 class Request extends Model
 {
     use HasFactory;
+    protected $table = 'price_by_ids';
     protected $fillable = [
         'user_id',
         'game',
