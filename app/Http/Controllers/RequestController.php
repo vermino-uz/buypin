@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\BotUser;
-use App\Models\PriceById;
+    use App\Models\PriceById;
 use App\Models\Request;
 use Illuminate\Http\Request as HttpRequest;
 use Illuminate\Http\Response;
@@ -86,7 +86,7 @@ class RequestController extends Controller
         $validatedData = $request->validate([
             'user_id' => 'required|integer|exists:bot_users,user_id',
             'game' => 'required|integer|max:255||exists:games,id',
-            'tariff' => 'required|integer|max:255||exists:tariffs,amount',
+            'tariff' => 'required|integer|max:255||exists:price_by_ids,amount',
             'account' => 'required|integer|min:1',
         ]);
         
