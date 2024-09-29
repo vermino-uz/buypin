@@ -34,6 +34,9 @@ class PromoCodeResource extends Resource
     {
         return $form
             ->schema([
+
+
+                
                 Select::make('game_id')
                     ->label('Game')
                     ->options(Game::all()->pluck('game_name', 'id'))
@@ -42,6 +45,9 @@ class PromoCodeResource extends Resource
                         $set('amount', null);
                         $set('promo', null);
                     }),
+
+
+
                 Select::make('amount') 
                     ->label('Amount')
                     ->options(function ($get) {
@@ -65,6 +71,9 @@ class PromoCodeResource extends Resource
                             $set('price', null);
                         }
                     }),
+
+
+
                 TextInput::make('price')
                     ->label('Price')
                     ->hidden(fn ($get) => !$get('game_id'))
@@ -77,6 +86,9 @@ class PromoCodeResource extends Resource
                             $set('amount', null);
                         }
                     }),
+
+
+
                 Textarea::make('promo')
                     ->label('Promo Codes')
                     ->required()
@@ -98,8 +110,6 @@ class PromoCodeResource extends Resource
                             ];
                         }, $promoCodes));
                     }),
-            
-            
             ]);
     }
 
