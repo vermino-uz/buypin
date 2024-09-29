@@ -25,14 +25,14 @@ class CreatePromoCode extends CreateRecord
    
        foreach ($promo_codes as $promo_code) {
            PromoCode::create([
-               'promo_code' => $promo_code,
+               'promo' => $promo_code,
                'game_id' => $game_id,
                'price' => $price,
                'amount' => $amount
            ]);
        }
    
-        return ['promo_code' => $last_promo_code, 'game_id' => $game_id, 'price' => $price, 'amount' => $amount];
+        return ['promo' => $last_promo_code, 'game_id' => $game_id, 'price' => $price, 'amount' => $amount];
     }
    
 }
