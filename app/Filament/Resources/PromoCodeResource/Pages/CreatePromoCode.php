@@ -19,7 +19,7 @@ class CreatePromoCode extends CreateRecord
        $game_id = $data['game_id'];
        $price = $data['price'];
        $amount = $data['amount'];
-       $promo_codes = explode("\n", $data['promo_codes']);
+       $promo_codes = explode("\n", $data['promo']);
        $promo_codes = array_map('trim', $promo_codes);
        $last_promo_code = array_pop($promo_codes); 
    
