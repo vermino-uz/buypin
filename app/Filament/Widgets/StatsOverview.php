@@ -28,6 +28,10 @@ class StatsOverview extends BaseWidget
                 ->color("warning")
                 ->descriptionIcon('heroicon-m-puzzle-piece')
                 ->description("Barcha o'yinlar soni"),
+        Stat::make("Jami so'rovlar soni", \App\Models\Request::count() . ' ta')
+            ->color("info")
+            ->descriptionIcon('heroicon-m-arrow-path')
+            ->description("Barcha so'rovlar soni"),
         ];
         return $stats;
     }
