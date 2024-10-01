@@ -1,5 +1,5 @@
 <x-filament-widgets::widget>
-    <x-filament::card class="h-[calc(100%-5px)]">
+    <x-filament::card class="h-90%">
         <div class="flex justify-between items-center">
             <div class="flex flex-col">
                 <h2 class="text-lg sm:text-xl font-bold tracking-tight">
