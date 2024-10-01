@@ -21,7 +21,9 @@ use Filament\Notifications\Notification;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\Textarea;
+use Filament\Tables\Grouping\Group;
 class PromoCodeResource extends Resource
+
 {
     protected static ?string $model = PromoCode::class;
     protected static ?string $navigationGroup = "O'yinlar va Tariflar";
@@ -120,7 +122,7 @@ class PromoCodeResource extends Resource
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: false),
             ])->groups([    
-                Tables\Grouping\Group::make('game.game_name')
+                Group::make('game.game_name')
                     ->label('Game')
                     ->collapsible(),
             ])
