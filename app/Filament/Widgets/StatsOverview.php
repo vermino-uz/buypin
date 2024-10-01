@@ -37,7 +37,7 @@ class StatsOverview extends BaseWidget
         })
             ->color("success")
             ->descriptionIcon('heroicon-m-currency-dollar')
-            ->description("Barcha foydalanuvchilar balansining umumiy miqdori"),
+            ->description("Barcha foydalanuvchilar balansi"),
         Stat::make("Jami bonus promo kodlar soni", \App\Models\Bonus::count() . ' ta')
             ->color("secondary")
             ->descriptionIcon('heroicon-m-gift')
