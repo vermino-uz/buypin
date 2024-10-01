@@ -24,7 +24,10 @@ class StatsOverview extends BaseWidget
                 ->color("primary")
                 ->descriptionIcon('heroicon-m-ticket')
                 ->description("Barcha promo kodlar soni"),
-            Stat::make("Jami kanallar soni", BotUser::count() . ' ta'),
+            Stat::make("Jami o'yinlar soni", \App\Models\Game::count() . ' ta')
+                ->color("warning")
+                ->descriptionIcon('heroicon-m-puzzle-piece')
+                ->description("Barcha o'yinlar soni"),
         ];
         return $stats;
     }
