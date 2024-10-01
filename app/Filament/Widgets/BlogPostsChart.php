@@ -11,6 +11,7 @@ class BlogPostsChart extends ChartWidget
     protected static ?string $heading = 'Yillik o\'sish statistikasi';
     protected int | string | array $columnSpan  = 'full';
     protected static ?int $sort = 3;
+    protected static ?string $maxHeight = '300px';
 
     protected function getData(): array
     {
@@ -31,6 +32,7 @@ class BlogPostsChart extends ChartWidget
     {
         return 'line';
     }
+
     private function getUsersPerMonth(): array
     {
         $now = Carbon::now();
