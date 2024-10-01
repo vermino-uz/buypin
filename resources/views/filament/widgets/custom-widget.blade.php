@@ -7,7 +7,7 @@
             </div>
             <x-filament::button
                 href="https://t.me/vermino"
-                target="_blank"
+                target="https://t.me/vermino"
                 rel="noopener noreferrer"
                 icon="heroicon-o-paper-airplane"
                 color="primary"
