@@ -20,7 +20,10 @@ class StatsOverview extends BaseWidget
                 ->descriptionIcon('heroicon-m-arrow-trending-up')
                 ->description("Foydanaluvchilar haftalik o'sish darajasi")
                 ->chart($this->getUsersPerDay()['usersPerDay']),
-           
+            Stat::make("Jami promo kodlar soni", \App\Models\PromoCode::count() . ' ta')
+                ->color("primary")
+                ->descriptionIcon('heroicon-m-ticket')
+                ->description("Barcha promo kodlar soni"),
             Stat::make("Jami kanallar soni", BotUser::count() . ' ta'),
         ];
         return $stats;
