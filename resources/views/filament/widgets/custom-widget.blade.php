@@ -1,27 +1,20 @@
-<x-filament-widgets::widget class="fi-account-widget">
+<x-filament-widgets::widget>
     <x-filament::card>
-        <div class="flex items-center gap-x-3">
-            <div class="flex-1 flex flex-col justify-between h-full">
-                <div>
-                    <h2 class="text-lg sm:text-xl font-bold tracking-tight">
-                        {{ __('Custom Widget') }}
-                    </h2>
-                    <p class="text-sm text-gray-500">Admin panel by Vermino</p>
-                </div>
-                <div class="mt-4">
-                    <x-filament::button
-                        href="https://t.me/vermino"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        icon="heroicon-o-paper-airplane"
-                        class="w-full justify-center"
-                        color="primary"
-                        style="background-color: #0088cc; border-color: #0088cc;"
-                    >
-                        Telegram
-                    </x-filament::button>
-                </div>
-            </div>
+        <div class="flex justify-between items-center space-x-4">
+            <h2 class="text-sm font-medium">
+                {{ __('Custom Widget') }}
+            </h2>
+            <x-filament::button
+                href="https://t.me/vermino"
+                target="_blank"
+                rel="noopener noreferrer"
+                icon="heroicon-o-paper-airplane"
+                size="xs"
+                color="primary"
+                style="background-color: #0088cc; border-color: #0088cc;"
+            >
+                Telegram
+            </x-filament::button>
         </div>
     </x-filament::card>
 </x-filament-widgets::widget>
