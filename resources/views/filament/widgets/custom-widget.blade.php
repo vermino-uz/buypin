@@ -7,6 +7,6 @@
         </div>
 
         {{-- Add your custom widget content here --}}
-        <p>This is a custom widget. Add your own content and functionality here.</p>
+        <p>Admin panel by Vermino <a href="https://t.me/vermino">Telegram</a></p>
     </x-filament::card>
 </x-filament-widgets::widget>
