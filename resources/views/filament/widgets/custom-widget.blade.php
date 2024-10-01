@@ -1,7 +1,7 @@
 <x-filament-widgets::widget>
     <x-filament::card>
         <div class="flex justify-between items-center space-x-4">
-            <div class="flex-shrink-0">
+            <div class="flex-shrink-0 mr-4">
                 <x-filament::avatar
                     size="lg"
                     src="https://admin.buypin.uz/images/imaged.png"
