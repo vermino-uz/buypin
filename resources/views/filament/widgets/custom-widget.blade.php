@@ -1,6 +1,6 @@
 <x-filament-widgets::widget>
     <x-filament::card>
-        <div class="flex h-[170px] justify-between items-center">
+        <div class="flex h-[10px] justify-between items-center">
 
 
 
