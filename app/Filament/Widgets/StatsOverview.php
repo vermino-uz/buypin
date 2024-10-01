@@ -33,11 +33,15 @@ class StatsOverview extends BaseWidget
             ->descriptionIcon('heroicon-m-arrow-path')
                 ->description("Barcha buyurtmalar soni"),
         Stat::make("Jami foydalanuvchilar balansi", function () {
-            return number_format(BotUser::sum('balance'), 0, '.', ' ') . ' so\'m';
+            return number_format(BotUser::sum('balance'), 0, '.', ' ') . ' $';
         })
             ->color("success")
             ->descriptionIcon('heroicon-m-currency-dollar')
             ->description("Barcha foydalanuvchilar balansining umumiy miqdori"),
+        Stat::make("Jami bonus promo kodlar soni", \App\Models\Bonus::count() . ' ta')
+            ->color("secondary")
+            ->descriptionIcon('heroicon-m-gift')
+            ->description("Barcha bonuslar soni"),
         ];
         return $stats;
     }
