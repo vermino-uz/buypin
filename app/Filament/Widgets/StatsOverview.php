@@ -31,7 +31,13 @@ class StatsOverview extends BaseWidget
         Stat::make("Jami so'rovlar soni", \App\Models\Request::count() . ' ta')
             ->color("info")
             ->descriptionIcon('heroicon-m-arrow-path')
-            ->description("Barcha so'rovlar soni"),
+                ->description("Barcha buyurtmalar soni"),
+        Stat::make("Jami foydalanuvchilar balansi", function () {
+            return number_format(BotUser::sum('balance'), 0, '.', ' ') . ' so\'m';
+        })
+            ->color("success")
+            ->descriptionIcon('heroicon-m-currency-dollar')
+            ->description("Barcha foydalanuvchilar balansining umumiy miqdori"),
         ];
         return $stats;
     }
