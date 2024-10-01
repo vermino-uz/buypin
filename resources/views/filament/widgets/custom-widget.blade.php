@@ -4,7 +4,7 @@
             <div class="flex-shrink-0">
                 <x-filament::avatar
                     size="lg"
-                    src="https://example.com/path-to-avatar-image.jpg"
+                    src="https://admin.buypin.uz/images/image.png"
                     alt="Vermino Avatar"
                 />
             </div>
