@@ -1,6 +1,6 @@
 <x-filament-widgets::widget>
     <x-filament::card>
-        <div class="flex justify-between items-center space-x-4">
+        <div class="flex justify-between items-center space-x-5">
             <h2 class="text-sm font-medium">
                 {{ __('Custom Widget') }}
             </h2>
