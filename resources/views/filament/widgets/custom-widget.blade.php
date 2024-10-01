@@ -7,6 +7,14 @@
         </div>
 
         {{-- Add your custom widget content here --}}
-        <p>Admin panel by Vermino <a href="https://t.me/vermino">Telegram</a></p>
+        <p>Admin panel by Vermino</p>
+        <x-filament::button
+            href="https://t.me/vermino"
+            target="_blank"
+            rel="noopener noreferrer"
+            icon="heroicon-o-paper-airplane"
+        >
+            Telegram
+        </x-filament::button>
     </x-filament::card>
 </x-filament-widgets::widget>
