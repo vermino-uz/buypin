@@ -6,7 +6,7 @@ use App\Models\BotUser;
 use Carbon\Carbon;
 use Filament\Widgets\ChartWidget;
 
-class MonthlyStatChart extends ChartWidget
+class BlogPostsChart extends ChartWidget
 {
     protected static ?string $heading = 'Yillik o\'sish statistikasi';
     protected int | string | array $columnSpan  = 'full';
