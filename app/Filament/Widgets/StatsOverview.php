@@ -20,7 +20,7 @@ class StatsOverview extends BaseWidget
                 ->descriptionIcon('heroicon-m-arrow-trending-up')
                 ->description("Foydanaluvchilar haftalik o'sish darajasi")
                 ->chart($this->getUsersPerDay()['usersPerDay']),
-            Stat::make("Jami faol foydalanuvchilar soni", BotUser::where('status', true)->count() . ' ta'),
+           
             Stat::make("Jami kanallar soni", BotUser::count() . ' ta'),
         ];
         return $stats;
