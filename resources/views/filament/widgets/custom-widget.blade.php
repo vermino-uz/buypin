@@ -9,7 +9,7 @@
                 />
             </div>
             <div class="flex-grow">
-                <h2 class="text-lg font-bold tracking-tight mb-1">{{ __('Vermino') }}</h2>
+                <h2 class="text-lg font-bold tracking-tight">{{ __('Vermino') }}</h2>
                 <p class="text-xs text-gray-500">Admin panel by Vermino</p>
             </div>
             <div class="flex-shrink-0">
