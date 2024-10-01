@@ -14,6 +14,8 @@
                     rel="noopener noreferrer"
                     icon="heroicon-o-paper-airplane"
                     class="self-center"
+                    color="primary"
+                    style="background-color: #0088cc; border-color: #0088cc;"
                 >
                     Telegram
                 </x-filament::button>
