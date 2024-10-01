@@ -11,7 +11,7 @@ class BlogPostsChart extends ChartWidget
     protected static ?string $heading = 'Yillik o\'sish statistikasi';
     protected int | string | array $columnSpan  = 'full';
     protected static ?int $sort = 3;
-    protected static ?string $maxHeight = '250px';
+    protected static ?string $maxHeight = '200px';
 
 
     protected function getData(): array
