@@ -1,13 +1,14 @@
 <x-filament-widgets::widget>
     <x-filament::card>
-        <div class="flex justify-between items-center space-x-8 p-4">
-            <div class="flex-shrink-0 mr-8">
+        <div class="flex justify-between items-center space-x-6">
+            <div class="flex-shrink-0">
                 <x-filament::avatar
                     size="lg"
                     src="https://admin.buypin.uz/images/imaged.png"
                     alt="Vermino Avatar"
                 />
             </div>
+            <div class="w-4"></div>
             <div class="flex-grow">
                 <h2 class="text-lg font-bold tracking-tight">{{ __('Vermino') }}</h2>
                 <p class="text-xs text-gray-500">Admin panel by Vermino</p>
