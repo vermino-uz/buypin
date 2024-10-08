@@ -85,7 +85,7 @@ class RequestController extends Controller
     // Store a new request
     public function store(HttpRequest $request)
     {
-        if ($request->isEmpty()) {
+        if ($request->all() === []) {
             return response()->json(['message' => 'Empty request received'], Response::HTTP_BAD_REQUEST);
         }
 
