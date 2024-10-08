@@ -83,6 +83,9 @@ class RequestController extends Controller
     // Store a new request
     public function store(HttpRequest $request)
     {
+        if($request==null){
+            return response()->json(['message' => 'Request is null'], Response::HTTP_BAD_REQUEST);
+        }
         $validatedData = $request->validate([
             'user_id' => 'required|integer|exists:bot_users,user_id',
             'game' => 'required|integer|max:255||exists:games,id',
