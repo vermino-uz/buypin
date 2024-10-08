@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\BotUser;
-    use App\Models\PriceById;
+use App\Models\PriceById;
 use App\Models\Request;
 use Illuminate\Http\Request as HttpRequest;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Log;
 use App\Models\Tariff;
+
 class RequestController extends Controller
 {
     /**
@@ -36,6 +37,7 @@ class RequestController extends Controller
         $requests = Request::where('user_id', $user_id)->get();
         return response()->json($requests, 200);
     }
+
     /**
      * @OA\Post(
      *     path="/api/create-request",
@@ -83,12 +85,13 @@ class RequestController extends Controller
     // Store a new request
     public function store(HttpRequest $request)
     {
-        if($request==null){
-            return response()->json(['message' => 'Request is null'], Response::HTTP_BAD_REQUEST);
+        if ($request->isEmpty()) {
+            return response()->json(['message' => 'Empty request received'], Response::HTTP_BAD_REQUEST);
         }
+
         $validatedData = $request->validate([
             'user_id' => 'required|integer|exists:bot_users,user_id',
-            'game' => 'required|integer|max:255||exists:games,id',
+            'game' => 'required|integer|max:255|exists:games,id',
             'tariff' => 'required|integer|exists:price_by_ids,amount',
             'account' => 'required|integer|min:1',
         ]);
@@ -130,7 +133,6 @@ class RequestController extends Controller
         // Double-check if the balance was actually updated
         $updatedUser = BotUser::where('user_id', $validatedData['user_id'])->first();
         
-
         return response()->json($newRequest, 201);
     }
 
