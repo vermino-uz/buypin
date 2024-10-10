@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\TopUp;
 use Illuminate\Http\Response;
 
-class TopUp extends Controller
+class TopUpController extends Controller
 {
     /**
      * @OA\Post(
