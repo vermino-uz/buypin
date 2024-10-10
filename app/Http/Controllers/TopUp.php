@@ -52,7 +52,7 @@ class TopUp extends Controller
             $topUp = TopUp::create([
                 'user_id' => $validatedData['user_id'],
                 'amount' => $validatedData['amount'],
-                'status' => 'pending', // Assuming initial status is pending
+                'status' => 'processing', // Assuming initial status is pending
             ]);
 
             return response()->json($topUp, Response::HTTP_CREATED);
