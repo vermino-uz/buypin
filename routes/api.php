@@ -7,6 +7,7 @@ use App\Http\Controllers\BotUserController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\TariffController;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\TopUpController;
 use App\Http\Controllers\BonusController;
 use App\Models\Bonus;
 use App\Http\Controllers\PromoCodeController;
@@ -28,6 +29,7 @@ Route::get('bonuses/get/{promo}', [BonusController::class, 'getBonusByPromo']);
 Route::get('prices-by-id', [PriceByIdController::class, 'index']);
 Route::get('prices-by-id/{game_id}', [PriceByIdController::class, 'show']);
 Route::post('telegram/webhook', [TelegramController::class, 'webhook']);
+Route::post('top-up', [TopUpController::class, 'store']);
 
 
 
