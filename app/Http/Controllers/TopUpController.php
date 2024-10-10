@@ -51,6 +51,7 @@ class TopUpController extends Controller
      */
     public function store(Request $request)
     {
+        Log::info('TopUp request received: ' . json_encode($request->all()));
         $validatedData = $request->validate([
             'user_id' => 'required|integer|exists:bot_users,user_id',
             'amount' => 'required|numeric|min:0',
