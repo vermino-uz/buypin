@@ -23,7 +23,14 @@ class TopUpController extends Controller
      *     @OA\Response(
      *         response=201,
      *         description="Top-up record created",
-     *         @OA\JsonContent(ref="#/components/schemas/TopUp")
+     *         @OA\JsonContent(
+     *             @OA\Property(property="id", type="integer", description="ID of the created top-up record"),
+     *             @OA\Property(property="user_id", type="integer", description="ID of the user"),
+     *             @OA\Property(property="amount", type="number", description="Amount topped up"),
+     *             @OA\Property(property="status", type="string", description="Status of the top-up"),
+     *             @OA\Property(property="created_at", type="string", format="date-time", description="Creation timestamp"),
+     *             @OA\Property(property="updated_at", type="string", format="date-time", description="Last update timestamp")
+     *         )
      *     ),
      *     @OA\Response(
      *         response=400,
