@@ -1,0 +1,797 @@
+Logger:         	MadelineProto 8.3.0
+Logger:         	Copyright (C) 2016-2024 Daniil Gentili
+Logger:         	Licensed under AGPLv3
+Logger:         	https://github.com/danog/MadelineProto
+Serialization:  	Got exclusive session lock!
+Logger:         	MadelineProto 8.3.0
+Logger:         	Copyright (C) 2016-2024 Daniil Gentili
+Logger:         	Licensed under AGPLv3
+Logger:         	https://github.com/danog/MadelineProto
+Serialization:  	Got exclusive session lock!
+MTProto:        	The database settings have changed!
+TL:             	Loading TL schemes...
+TL:             	Parsing TL_telegram_v186.tl...
+TL:             	Parsing TL_mtproto_v1.tl...
+TL:             	Parsing TL_secret.tl...
+MTProto:        	The prometheus settings have changed!
+MTProto:        	The serialization settings have changed!
+TL:             	Loading TL schemes...
+TL:             	Parsing TL_telegram_v186.tl...
+TL:             	Parsing TL_mtproto_v1.tl...
+TL:             	Parsing TL_secret.tl...
+DataCenter:     	Acquiring connect lock for 2!
+DataCenter:     	Connecting to DC 2
+DataCenterConnection: 	Restoring 0 messages to DC 2
+Session:        	Resetting session in DC 2.0 due to creating initial session...
+Connection:     	Connecting to DC 2.0 via tcp://149.154.167.51:443 main DC 2, via ipv4 using AbridgedStream => BufferedRawStream => DefaultStream 
+Connection:     	Connected to DC 2.0 via tcp://149.154.167.51:443 main DC 2, via ipv4 using AbridgedStream => BufferedRawStream => DefaultStream!
+DataCenterConnection: 	Acquiring lock in order to init auth for DC 2
+DataCenterConnection: 	Initing auth for DC 2
+DataCenterConnection: 	Generating permanent authorization key for DC 2...
+AuthKeyHandler: 	Requesting pq...
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+ResponseHandler: 	Trying to assign a response of type ResPQ to its request...
+ResponseHandler: 	Does the request of return type ResPQ match?
+ResponseHandler: 	Yes
+AuthKeyHandler: 	Factorizing with native_single_cpp (please wait, might take a while)
+AuthKeyHandler: 	Factorizing with python_single_alt (please wait, might take a while)
+AuthKeyHandler: 	Install https://prime.madelineproto.xyz and the FFI extension to speed this up!
+AuthKeyHandler: 	Factorizing with python_single (please wait, might take a while)
+AuthKeyHandler: 	Install https://prime.madelineproto.xyz and the FFI extension to speed this up!
+AuthKeyHandler: 	Factorizing with native_single (please wait, might take a while)
+AuthKeyHandler: 	Install https://prime.madelineproto.xyz and the FFI extension to speed this up!
+AuthKeyHandler: 	Factorization 2117704276722914977 = 1304508763 * 1623372979
+AuthKeyHandler: 	Starting Diffie Hellman key exchange
+ResponseHandler: 	Trying to assign a response of type Server_DH_Params to its request...
+ResponseHandler: 	Does the request of return type Server_DH_Params match?
+ResponseHandler: 	Yes
+AuthKeyHandler: 	Server-client time delta = 0.0 s
+Crypt:          	Executing p/g checks (1/2)...
+Crypt:          	Executing p/g checks (2/2)...
+Crypt:          	Executing g check...
+Crypt:          	Executing g_a check (1/2)...
+Crypt:          	Executing g_a check (2/2)...
+AuthKeyHandler: 	Generating b...
+AuthKeyHandler: 	Generating g_b...
+Crypt:          	Executing g_a check (1/2)...
+Crypt:          	Executing g_a check (2/2)...
+AuthKeyHandler: 	Executing g_b check...
+AuthKeyHandler: 	Preparing client_DH_inner_data...
+AuthKeyHandler: 	Executing set_client_DH_params...
+ResponseHandler: 	Trying to assign a response of type Set_client_DH_params_answer to its request...
+ResponseHandler: 	Does the request of return type Set_client_DH_params_answer match?
+ResponseHandler: 	Yes
+AuthKeyHandler: 	Generating authorization key (install gmp to speed up this process)...
+AuthKeyHandler: 	Diffie Hellman key exchange processed successfully!
+AuthKeyHandler: 	Auth key generated
+DataCenterConnection: 	Generating temporary authorization key for DC 2...
+AuthKeyHandler: 	Requesting pq...
+ResponseHandler: 	Trying to assign a response of type ResPQ to its request...
+ResponseHandler: 	Does the request of return type ResPQ match?
+ResponseHandler: 	Yes
+AuthKeyHandler: 	Factorizing with native_single_cpp (please wait, might take a while)
+AuthKeyHandler: 	Factorizing with python_single_alt (please wait, might take a while)
+AuthKeyHandler: 	Install https://prime.madelineproto.xyz and the FFI extension to speed this up!
+AuthKeyHandler: 	Factorizing with python_single (please wait, might take a while)
+AuthKeyHandler: 	Install https://prime.madelineproto.xyz and the FFI extension to speed this up!
+AuthKeyHandler: 	Factorizing with native_single (please wait, might take a while)
+AuthKeyHandler: 	Install https://prime.madelineproto.xyz and the FFI extension to speed this up!
+AuthKeyHandler: 	Factorization 2536969035490473799 = 1413546983 * 1794753953
+AuthKeyHandler: 	Starting Diffie Hellman key exchange
+ResponseHandler: 	Trying to assign a response of type Server_DH_Params to its request...
+ResponseHandler: 	Does the request of return type Server_DH_Params match?
+ResponseHandler: 	Yes
+AuthKeyHandler: 	Server-client time delta = 0.0 s
+Crypt:          	Executing p/g checks (1/2)...
+Crypt:          	Executing p/g checks (2/2)...
+Crypt:          	Executing g check...
+Crypt:          	Executing g_a check (1/2)...
+Crypt:          	Executing g_a check (2/2)...
+AuthKeyHandler: 	Generating b...
+AuthKeyHandler: 	Generating g_b...
+Crypt:          	Executing g_a check (1/2)...
+Crypt:          	Executing g_a check (2/2)...
+AuthKeyHandler: 	Executing g_b check...
+AuthKeyHandler: 	Preparing client_DH_inner_data...
+AuthKeyHandler: 	Executing set_client_DH_params...
+ResponseHandler: 	Trying to assign a response of type Set_client_DH_params_answer to its request...
+ResponseHandler: 	Does the request of return type Set_client_DH_params_answer match?
+ResponseHandler: 	Yes
+AuthKeyHandler: 	Generating authorization key (install gmp to speed up this process)...
+AuthKeyHandler: 	Diffie Hellman key exchange processed successfully!
+AuthKeyHandler: 	Auth key generated
+DataCenterConnection: 	Binding authorization keys...
+WriteLoop:      	Skipping help.getConfig pending due to unbound keys in DC 2.0
+WriteLoop:      	Skipping help.getConfig pending due to unbound keys in DC 2.0
+Session:        	Garbage collected 6 incoming messages in DC 2, 0 left
+Session:        	Garbage collected 7 outgoing messages in DC 2, 1 left
+DataCenterConnection: 	Bound temporary and permanent authorization keys, DC 2
+WriteLoop:      	Writing client info (also executing help.getConfig)...
+WriteLoop:      	Writing client info (also executing help.getConfig)...
+WriteLoop:      	Writing client info (also executing help.getConfig)...
+DataCenterConnection: 	Done initing auth for DC 2
+PingLoop:       	Ping DC 2.0
+MTProto:        	Updated config!
+MTProto:        	Starting update system
+APIWrapper:     	Prompting initial serialization...
+SessionPaths:   	Waiting for exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/safe.php.lock...
+SessionPaths:   	Got exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/safe.php.lock...
+SessionPaths:   	Waiting for exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/lightState.php.lock...
+SessionPaths:   	Got exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/lightState.php.lock...
+APIWrapper:     	Saved session!
+APIWrapper:     	Done initial serialization!
+APIWrapper:     	Shutting down MadelineProto (danog\MadelineProto\API)
+MTProto:        	Will unreference instance
+DataCenterConnection: 	Disconnecting from shared DC 2
+Connection:     	Disconnecting from DC 2.0
+DataCenterConnection: 	Backed up help.getConfig,  from DC 2.0
+Connection:     	Disconnected from DC 2.0
+DataCenterConnection: 	Backed up 1, added to 0 existing messages) from DC 2
+MTProto:        	Unreferenced instance
+APIWrapper:     	Prompting final serialization...
+SessionPaths:   	Waiting for exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/safe.php.lock...
+SessionPaths:   	Got exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/safe.php.lock...
+SessionPaths:   	Waiting for exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/lightState.php.lock...
+SessionPaths:   	Got exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/lightState.php.lock...
+APIWrapper:     	Saved session!
+APIWrapper:     	Done final serialization!
+Serialization:  	Unlocking exclusive session lock!
+Serialization:  	Unlocked exclusive session lock!
+AbstractServer: 	Starting IPC server /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline (process)
+ProcessRunner:  	Starting process with '/www/server/php/83/bin/php' '-dhtml_errors=0' '-ddisplay_errors=0' '-dlog_errors=1' '/www/wwwroot/admin.buypin.uz/public/madeline.test/madeline.php' 'madeline-ipc' '/www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline' '1428640279'
+AbstractServer: 	Error: Call to undefined function danog\MadelineProto\Ipc\Runner\proc_open() in phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/madelineproto/src/Ipc/Runner/ProcessRunner.php:123
+Stack trace:
+#0 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/madelineproto/src/Ipc/AbstractServer.php(119): danog\MadelineProto\Ipc\Runner\ProcessRunner::start()
+#1 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/madelineproto/src/Serialization.php(176): danog\MadelineProto\Ipc\AbstractServer::startMe()
+#2 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/amphp/amp/src/functions.php(33): danog\MadelineProto\Serialization::unserialize()
+#3 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(425): Amp\{closure}()
+#4 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(616): Revolt\EventLoop\Internal\AbstractDriver->invokeMicrotasks()
+#5 [internal function]: Revolt\EventLoop\Internal\AbstractDriver->Revolt\EventLoop\Internal\{closure}()
+#6 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/DriverSuspension.php(64): Fiber->resume()
+#7 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(425): Revolt\EventLoop\Internal\DriverSuspension::Revolt\EventLoop\Internal\{closure}()
+#8 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(616): Revolt\EventLoop\Internal\AbstractDriver->invokeMicrotasks()
+#9 [internal function]: Revolt\EventLoop\Internal\AbstractDriver->Revolt\EventLoop\Internal\{closure}()
+#10 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/DriverSuspension.php(64): Fiber->resume()
+#11 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(425): Revolt\EventLoop\Internal\DriverSuspension::Revolt\EventLoop\Internal\{closure}()
+#12 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(616): Revolt\EventLoop\Internal\AbstractDriver->invokeMicrotasks()
+#13 [internal function]: Revolt\EventLoop\Internal\AbstractDriver->Revolt\EventLoop\Internal\{closure}()
+#14 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(497): Fiber->resume()
+#15 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(553): Revolt\EventLoop\Internal\AbstractDriver->invokeCallbacks()
+#16 [internal function]: Revolt\EventLoop\Internal\AbstractDriver->Revolt\EventLoop\Internal\{closure}()
+#17 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(94): Fiber->resume()
+#18 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/DriverSuspension.php(117): Revolt\EventLoop\Internal\AbstractDriver->Revolt\EventLoop\Internal\{closure}()
+#19 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/amphp/amp/src/Future.php(251): Revolt\EventLoop\Internal\DriverSuspension->suspend()
+#20 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/madelineproto/src/API.php(312): Amp\Future->await()
+#21 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/madelineproto/src/API.php(224): danog\MadelineProto\API->connectToMadelineProto()
+#22 /www/wwwroot/admin.buypin.uz/public/madeline.test/index.php(14): danog\MadelineProto\API->__construct()
+#23 {main}
+AbstractServer: 	Starting IPC server /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline (web)
+WebRunner:      	Successfully connected to tls://admin.buypin.uz:443!
+WebRunner:      	Sending payload: GET /madeline.test/madeline.php?argv%5B0%5D=madeline-ipc&argv%5B1%5D=%2Fwww%2Fwwwroot%2Fadmin.buypin.uz%2Fpublic%2Fmadeline.test%2Fsession.madeline&argv%5B2%5D=1428640279&cwd=%2Fwww%2Fwwwroot%2Fadmin.buypin.uz%2Fpublic%2Fmadeline.test&MadelineSelfRestart=1 HTTP/1.1
+Host: admin.buypin.uz
+
+
+WebRunner:      	Successfully connected to tcp://admin.buypin.uz:443!
+WebRunner:      	Sending payload: GET /madeline.test/madeline.php?argv%5B0%5D=madeline-ipc&argv%5B1%5D=%2Fwww%2Fwwwroot%2Fadmin.buypin.uz%2Fpublic%2Fmadeline.test%2Fsession.madeline&argv%5B2%5D=1428640279&cwd=%2Fwww%2Fwwwroot%2Fadmin.buypin.uz%2Fpublic%2Fmadeline.test&MadelineSelfRestart=1 HTTP/1.1
+Host: admin.buypin.uz
+
+
+WebRunner:      	Successfully connected to tcp://admin.buypin.uz:80!
+WebRunner:      	Sending payload: GET /madeline.test/madeline.php?argv%5B0%5D=madeline-ipc&argv%5B1%5D=%2Fwww%2Fwwwroot%2Fadmin.buypin.uz%2Fpublic%2Fmadeline.test%2Fsession.madeline&argv%5B2%5D=1428640279&cwd=%2Fwww%2Fwwwroot%2Fadmin.buypin.uz%2Fpublic%2Fmadeline.test&MadelineSelfRestart=1 HTTP/1.1
+Host: admin.buypin.uz
+
+
+Serialization:  	MadelineProto is starting, please wait...
+Logger:         	MadelineProto 8.3.0
+Logger:         	Copyright (C) 2016-2024 Daniil Gentili
+Logger:         	Licensed under AGPLv3
+Logger:         	https://github.com/danog/MadelineProto
+Serialization:  	Got exclusive session lock!
+DataCenter:     	Acquiring connect lock for 2!
+DataCenter:     	Connecting to DC 2
+DataCenterConnection: 	Restoring 0 messages to DC 2
+Session:        	Resetting session in DC 2.0 due to creating initial session...
+Connection:     	Connecting to DC 2.0 via tcp://149.154.167.50:443 main DC 2, via ipv4 using AbridgedStream => BufferedRawStream => DefaultStream 
+Connection:     	Connected to DC 2.0 via tcp://149.154.167.50:443 main DC 2, via ipv4 using AbridgedStream => BufferedRawStream => DefaultStream!
+DataCenterConnection: 	Acquiring lock in order to init auth for DC 2
+DataCenterConnection: 	Initing auth for DC 2
+DataCenterConnection: 	Done initing auth for DC 2
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+PingLoop:       	Ping DC 2.0
+MTProto:        	AUTH_KEY_UNREGISTERED
+MTProto:        	Starting update system
+APIWrapper:     	MadelineProto is ready!
+Loop:           	Self-restarted, restart token 1
+Loop:           	Will self-restart
+Loop:           	Adding restart callback!
+Loop:           	Added restart callback with ID restarter!
+Loop:           	Done webhost init process!
+MTProto:        	The bot was started!
+SessionPaths:   	Waiting for exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/ipcState.php.lock...
+SessionPaths:   	Got exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/ipcState.php.lock...
+SessionPaths:   	Waiting for exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/safe.php.lock...
+SessionPaths:   	Got exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/safe.php.lock...
+SessionPaths:   	Waiting for exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/lightState.php.lock...
+SessionPaths:   	Got exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/lightState.php.lock...
+APIWrapper:     	Saved session!
+Serialization:  	MadelineProto is starting, please wait...
+Serialization:  	Connected to IPC socket!
+MTProto:        	Will unreference instance
+DataCenterConnection: 	Disconnecting from shared DC 2
+DataCenterConnection: 	Backed up 0, added to 1 existing messages) from DC 2
+MTProto:        	Unreferenced instance
+APIWrapper:     	MadelineProto is ready!
+AbstractServer: 	IPC server started successfully!
+AbstractServer: 	Accepted IPC client connection!
+MTProto:        	Shutting down MadelineProto (MTProto)
+MTProto:        	Will unreference instance
+DataCenterConnection: 	Disconnecting from shared DC 2
+DataCenterConnection: 	Backed up 0, added to 1 existing messages) from DC 2
+MTProto:        	Unreferenced instance
+MTProto:        	Successfully destroyed MadelineProto
+Logger:         	MadelineProto 8.3.0
+Logger:         	Copyright (C) 2016-2024 Daniil Gentili
+Logger:         	Licensed under AGPLv3
+Logger:         	https://github.com/danog/MadelineProto
+Logger:         	MadelineProto 8.3.0
+Logger:         	Copyright (C) 2016-2024 Daniil Gentili
+Logger:         	Licensed under AGPLv3
+Logger:         	https://github.com/danog/MadelineProto
+AbstractServer: 	Accepted IPC client connection!
+Serialization:  	MadelineProto is starting, please wait...
+Serialization:  	Connected to IPC socket!
+Serialization:  	MadelineProto self-restarted successfully!
+Logger:         	MadelineProto 8.3.0
+Logger:         	Copyright (C) 2016-2024 Daniil Gentili
+Logger:         	Licensed under AGPLv3
+Logger:         	https://github.com/danog/MadelineProto
+AbstractServer: 	Accepted IPC client connection!
+Serialization:  	MadelineProto is starting, please wait...
+Serialization:  	Connected to IPC socket!
+PingLoop:       	Ping DC 2.0
+Logger:         	MadelineProto 8.3.0
+Logger:         	Copyright (C) 2016-2024 Daniil Gentili
+Logger:         	Licensed under AGPLv3
+Logger:         	https://github.com/danog/MadelineProto
+AbstractServer: 	Accepted IPC client connection!
+Serialization:  	MadelineProto is starting, please wait...
+Serialization:  	Connected to IPC socket!
+Logger:         	MadelineProto 8.3.0
+Logger:         	Copyright (C) 2016-2024 Daniil Gentili
+Logger:         	Licensed under AGPLv3
+Logger:         	https://github.com/danog/MadelineProto
+AbstractServer: 	Accepted IPC client connection!
+Serialization:  	MadelineProto is starting, please wait...
+Serialization:  	Connected to IPC socket!
+Session:        	Garbage collected 7 incoming messages in DC 2, 0 left
+Session:        	Garbage collected 6 outgoing messages in DC 2, 0 left
+PingLoop:       	Ping DC 2.0
+PingLoop:       	Ping DC 2.0
+Session:        	Garbage collected 2 incoming messages in DC 2, 0 left
+Session:        	Garbage collected 2 outgoing messages in DC 2, 0 left
+PingLoop:       	Ping DC 2.0
+PingLoop:       	Ping DC 2.0
+Logger:         	MadelineProto 8.3.0
+Logger:         	Copyright (C) 2016-2024 Daniil Gentili
+Logger:         	Licensed under AGPLv3
+Logger:         	https://github.com/danog/MadelineProto
+AbstractServer: 	Accepted IPC client connection!
+Serialization:  	MadelineProto is starting, please wait...
+Serialization:  	Connected to IPC socket!
+Login:          	Sending code...
+ResponseHandler: 	Resending auth.sendCode with message ID 7412619223635875124 sent 0.061500945 seconds ago to new DC 5...
+DataCenter:     	Acquiring connect lock for 5!
+DataCenter:     	Connecting to DC 5
+DataCenterConnection: 	Restoring 0 messages to DC 5
+Session:        	Resetting session in DC 5.0 due to creating initial session...
+Connection:     	Connecting to DC 5.0 via tcp://91.108.56.123:443 main DC 5, via ipv4 using AbridgedStream => BufferedRawStream => DefaultStream 
+Connection:     	Connected to DC 5.0 via tcp://91.108.56.123:443 main DC 5, via ipv4 using AbridgedStream => BufferedRawStream => DefaultStream!
+DataCenterConnection: 	Acquiring lock in order to init auth for DC 5
+DataCenterConnection: 	Initing auth for DC 5
+DataCenterConnection: 	Generating permanent authorization key for DC 5...
+AuthKeyHandler: 	Requesting pq...
+Session:        	Garbage collected 0 outgoing messages in DC 5, 1 left
+ResponseHandler: 	Trying to assign a response of type ResPQ to its request...
+ResponseHandler: 	Does the request of return type ResPQ match?
+ResponseHandler: 	Yes
+AuthKeyHandler: 	Factorizing with native_single_cpp (please wait, might take a while)
+AuthKeyHandler: 	Factorizing with python_single_alt (please wait, might take a while)
+AuthKeyHandler: 	Install https://prime.madelineproto.xyz and the FFI extension to speed this up!
+AuthKeyHandler: 	Factorizing with python_single (please wait, might take a while)
+AuthKeyHandler: 	Install https://prime.madelineproto.xyz and the FFI extension to speed this up!
+AuthKeyHandler: 	Factorizing with native_single (please wait, might take a while)
+AuthKeyHandler: 	Install https://prime.madelineproto.xyz and the FFI extension to speed this up!
+AuthKeyHandler: 	Factorization 2702560254874493257 = 1633838071 * 1654117567
+AuthKeyHandler: 	Starting Diffie Hellman key exchange
+ResponseHandler: 	Trying to assign a response of type Server_DH_Params to its request...
+ResponseHandler: 	Does the request of return type Server_DH_Params match?
+ResponseHandler: 	Yes
+Exception:      	Could not connect to MadelineProto, please enable proc_open and remove open_basedir restrictions or disable webserver path rewrites to fix! If you already did that, make sure the CLI version of PHP is exactly the same as the web version (same version, extensions, et cetera) and check out the MadelineProto.log file for more info about the error that prevented the IPC server from starting. in API.php:323
+entry:          	\danog\MadelineProto\Exception: Could not connect to MadelineProto, please enable proc_open and remove open_basedir restrictions or disable webserver path rewrites to fix! If you already did that, make sure the CLI version of PHP is exactly the same as the web version (same version, extensions, et cetera) and check out the MadelineProto.log file for more info about the error that prevented the IPC server from starting. in phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/madelineproto/src/API.php:323
+Revision: 8.3.0
+TL Trace:
+<br>
+API.php(194):       	connectToMadelineProto()<br>
+entry.php(114):     	__construct()<br>
+entry.php(154):     	danog\MadelineProto\Ipc\Runner\{closure}()<br>
+madeline-8.3.0.phar(52):	require_once("phar:\/\/\/www\/wwwroot\/admin.buypin.uz\/public\/madeline.test\/madeline-8.3.0.phar\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/entry.php")<br>
+madeline.php(173):  	require_once("\/www\/wwwroot\/admin.buypin.uz\/public\/madeline.test\/madeline-8.3.0.phar")<br>
+madeline.php(211):  	load()<br>
+madeline.php(249):  	install()
+entry:          	Got exception in IPC server, exiting...
+entry:          	Not reporting error!
+AuthKeyHandler: 	Server-client time delta = -1.0 s
+Crypt:          	Executing p/g checks (1/2)...
+Crypt:          	Executing p/g checks (2/2)...
+Crypt:          	Executing g check...
+Crypt:          	Executing g_a check (1/2)...
+Crypt:          	Executing g_a check (2/2)...
+AuthKeyHandler: 	Generating b...
+AuthKeyHandler: 	Generating g_b...
+Crypt:          	Executing g_a check (1/2)...
+Crypt:          	Executing g_a check (2/2)...
+AuthKeyHandler: 	Executing g_b check...
+AuthKeyHandler: 	Preparing client_DH_inner_data...
+AuthKeyHandler: 	Executing set_client_DH_params...
+Session:        	Garbage collected 3 incoming messages in DC 2, 0 left
+Session:        	Can't garbage collect auth.sendCode sent 6.160688246 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 2 outgoing messages in DC 2, 1 left
+PingLoop:       	Ping DC 2.0
+SessionPaths:   	Waiting for exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/safe.php.lock...
+SessionPaths:   	Got exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/safe.php.lock...
+SessionPaths:   	Waiting for exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/lightState.php.lock...
+SessionPaths:   	Got exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/lightState.php.lock...
+APIWrapper:     	Saved session!
+ResponseHandler: 	Trying to assign a response of type Set_client_DH_params_answer to its request...
+ResponseHandler: 	Does the request of return type Set_client_DH_params_answer match?
+ResponseHandler: 	Yes
+AuthKeyHandler: 	Generating authorization key (install gmp to speed up this process)...
+AuthKeyHandler: 	Diffie Hellman key exchange processed successfully!
+AuthKeyHandler: 	Auth key generated
+DataCenterConnection: 	Generating temporary authorization key for DC 5...
+AuthKeyHandler: 	Requesting pq...
+Session:        	Garbage collected 3 incoming messages in DC 5, 0 left
+Session:        	Garbage collected 3 outgoing messages in DC 5, 1 left
+ResponseHandler: 	Trying to assign a response of type ResPQ to its request...
+ResponseHandler: 	Does the request of return type ResPQ match?
+ResponseHandler: 	Yes
+AuthKeyHandler: 	Factorizing with native_single_cpp (please wait, might take a while)
+AuthKeyHandler: 	Factorizing with python_single_alt (please wait, might take a while)
+AuthKeyHandler: 	Install https://prime.madelineproto.xyz and the FFI extension to speed this up!
+AuthKeyHandler: 	Factorizing with python_single (please wait, might take a while)
+AuthKeyHandler: 	Install https://prime.madelineproto.xyz and the FFI extension to speed this up!
+AuthKeyHandler: 	Factorizing with native_single (please wait, might take a while)
+AuthKeyHandler: 	Install https://prime.madelineproto.xyz and the FFI extension to speed this up!
+AuthKeyHandler: 	Factorization 2842392798523020121 = 1427460763 * 1991223067
+AuthKeyHandler: 	Starting Diffie Hellman key exchange
+PingLoop:       	Ping DC 2.0
+ResponseHandler: 	Trying to assign a response of type Server_DH_Params to its request...
+ResponseHandler: 	Does the request of return type Server_DH_Params match?
+ResponseHandler: 	Yes
+AuthKeyHandler: 	Server-client time delta = -1.0 s
+Crypt:          	Executing p/g checks (1/2)...
+Crypt:          	Executing p/g checks (2/2)...
+Crypt:          	Executing g check...
+Crypt:          	Executing g_a check (1/2)...
+Crypt:          	Executing g_a check (2/2)...
+AuthKeyHandler: 	Generating b...
+AuthKeyHandler: 	Generating g_b...
+Crypt:          	Executing g_a check (1/2)...
+Crypt:          	Executing g_a check (2/2)...
+AuthKeyHandler: 	Executing g_b check...
+AuthKeyHandler: 	Preparing client_DH_inner_data...
+AuthKeyHandler: 	Executing set_client_DH_params...
+ResponseHandler: 	Trying to assign a response of type Set_client_DH_params_answer to its request...
+ResponseHandler: 	Does the request of return type Set_client_DH_params_answer match?
+ResponseHandler: 	Yes
+AuthKeyHandler: 	Generating authorization key (install gmp to speed up this process)...
+AuthKeyHandler: 	Diffie Hellman key exchange processed successfully!
+AuthKeyHandler: 	Auth key generated
+DataCenterConnection: 	Binding authorization keys...
+WriteLoop:      	Skipping auth.sendCode sent 12.504406983 seconds ago due to unbound keys in DC 5.0
+DataCenterConnection: 	Bound temporary and permanent authorization keys, DC 5
+WriteLoop:      	Skipping auth.sendCode sent 12.889375145 seconds ago due to uninited connection in DC 5.0
+WriteLoop:      	Writing client info (also executing help.getConfig)...
+DataCenterConnection: 	Done initing auth for DC 5
+PingLoop:       	Ping DC 5.0
+Login:          	Code sent successfully! Once you receive the code you should use the completePhoneLogin function.
+Session:        	Garbage collected 2 incoming messages in DC 2, 0 left
+Session:        	Garbage collected 4 outgoing messages in DC 2, 0 left
+PingLoop:       	Ping DC 2.0
+PingLoop:       	Ping DC 5.0
+Session:        	Garbage collected 13 incoming messages in DC 5, 0 left
+Session:        	Garbage collected 12 outgoing messages in DC 5, 0 left
+PingLoop:       	Ping DC 2.0
+PingLoop:       	Ping DC 5.0
+Session:        	Garbage collected 2 incoming messages in DC 2, 0 left
+Session:        	Garbage collected 2 outgoing messages in DC 2, 0 left
+PingLoop:       	Ping DC 2.0
+PingLoop:       	Ping DC 5.0
+Session:        	Garbage collected 2 incoming messages in DC 5, 0 left
+Session:        	Garbage collected 2 outgoing messages in DC 5, 0 left
+PingLoop:       	Ping DC 2.0
+PingLoop:       	Ping DC 5.0
+Session:        	Garbage collected 2 incoming messages in DC 2, 0 left
+Session:        	Garbage collected 2 outgoing messages in DC 2, 0 left
+SessionPaths:   	Waiting for exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/safe.php.lock...
+SessionPaths:   	Got exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/safe.php.lock...
+SessionPaths:   	Waiting for exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/lightState.php.lock...
+SessionPaths:   	Got exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/lightState.php.lock...
+APIWrapper:     	Saved session!
+PingLoop:       	Ping DC 2.0
+Logger:         	MadelineProto 8.3.0
+Logger:         	Copyright (C) 2016-2024 Daniil Gentili
+Logger:         	Licensed under AGPLv3
+Logger:         	https://github.com/danog/MadelineProto
+AbstractServer: 	Accepted IPC client connection!
+Serialization:  	MadelineProto is starting, please wait...
+Serialization:  	Connected to IPC socket!
+Login:          	Logging in as a normal user...
+PingLoop:       	Ping DC 5.0
+Login:          	2FA enabled, you will have to call the complete2falogin function...
+Session:        	Garbage collected 4 incoming messages in DC 5, 0 left
+Session:        	Garbage collected 5 outgoing messages in DC 5, 0 left
+PingLoop:       	Ping DC 2.0
+PingLoop:       	Ping DC 5.0
+Session:        	Garbage collected 2 incoming messages in DC 2, 0 left
+Session:        	Garbage collected 2 outgoing messages in DC 2, 0 left
+PingLoop:       	Ping DC 2.0
+PingLoop:       	Ping DC 5.0
+Logger:         	MadelineProto 8.3.0
+Logger:         	Copyright (C) 2016-2024 Daniil Gentili
+Logger:         	Licensed under AGPLv3
+Logger:         	https://github.com/danog/MadelineProto
+AbstractServer: 	Accepted IPC client connection!
+Serialization:  	MadelineProto is starting, please wait...
+Serialization:  	Connected to IPC socket!
+Login:          	Logging in as a normal user...
+Crypt:          	Executing p/g checks (1/2)...
+Crypt:          	Executing p/g checks (2/2)...
+Crypt:          	Executing g check...
+Crypt:          	Executing p/g checks (1/2)...
+Crypt:          	Executing p/g checks (2/2)...
+Crypt:          	Executing g check...
+Crypt:          	Executing g_a check (1/2)...
+Crypt:          	Executing g_a check (2/2)...
+Login:          	Logged in successfully!
+AbstractServer: 	Got error while trying to send result of waitQrLogin: Amp\Ipc\Sync\ChannelException: The channel was already closed! in phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/ipc/lib/Sync/ChannelledSocket.php:39
+Stack trace:
+#0 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/madelineproto/src/Ipc/AbstractServer.php(272): Amp\Ipc\Sync\ChannelledSocket->send()
+#1 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(425): danog\MadelineProto\Ipc\AbstractServer->clientRequest()
+#2 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(616): Revolt\EventLoop\Internal\AbstractDriver->invokeMicrotasks()
+#3 [internal function]: Revolt\EventLoop\Internal\AbstractDriver->Revolt\EventLoop\Internal\{closure}()
+#4 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/DriverSuspension.php(171): Fiber->throw()
+#5 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(425): Revolt\EventLoop\Internal\DriverSuspension::Revolt\EventLoop\Internal\{closure}()
+#6 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(616): Revolt\EventLoop\Internal\AbstractDriver->invokeMicrotasks()
+#7 [internal function]: Revolt\EventLoop\Internal\AbstractDriver->Revolt\EventLoop\Internal\{closure}()
+#8 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(497): Fiber->resume()
+#9 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(553): Revolt\EventLoop\Internal\AbstractDriver->invokeCallbacks()
+#10 [internal function]: Revolt\EventLoop\Internal\AbstractDriver->Revolt\EventLoop\Internal\{closure}()
+#11 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(94): Fiber->resume()
+#12 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/DriverSuspension.php(117): Revolt\EventLoop\Internal\AbstractDriver->Revolt\EventLoop\Internal\{closure}()
+#13 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/amphp/amp/src/Future.php(251): Revolt\EventLoop\Internal\DriverSuspension->suspend()
+#14 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/madelineproto/src/Ipc/AbstractServer.php(176): Amp\Future->await()
+#15 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/madelineproto/src/Ipc/Runner/entry.php(119): danog\MadelineProto\Ipc\AbstractServer::waitShutdown()
+#16 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/madelineproto/src/Ipc/Runner/entry.php(154): danog\MadelineProto\Installer::danog\MadelineProto\Ipc\Runner\{closure}()
+#17 /www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar(52): require_once('...')
+#18 /www/wwwroot/admin.buypin.uz/public/madeline.test/madeline.php(173): require_once('...')
+#19 /www/wwwroot/admin.buypin.uz/public/madeline.test/madeline.php(211): danog\MadelineProto\Installer::load()
+#20 /www/wwwroot/admin.buypin.uz/public/madeline.test/madeline.php(249): danog\MadelineProto\Installer->install()
+#21 {main}
+AbstractServer: 	Got error while trying to send error of error of waitQrLogin: Amp\Ipc\Sync\ChannelException: The channel was already closed! in phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/ipc/lib/Sync/ChannelledSocket.php:39
+Stack trace:
+#0 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/madelineproto/src/Ipc/AbstractServer.php(276): Amp\Ipc\Sync\ChannelledSocket->send()
+#1 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(425): danog\MadelineProto\Ipc\AbstractServer->clientRequest()
+#2 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(616): Revolt\EventLoop\Internal\AbstractDriver->invokeMicrotasks()
+#3 [internal function]: Revolt\EventLoop\Internal\AbstractDriver->Revolt\EventLoop\Internal\{closure}()
+#4 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/DriverSuspension.php(171): Fiber->throw()
+#5 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(425): Revolt\EventLoop\Internal\DriverSuspension::Revolt\EventLoop\Internal\{closure}()
+#6 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(616): Revolt\EventLoop\Internal\AbstractDriver->invokeMicrotasks()
+#7 [internal function]: Revolt\EventLoop\Internal\AbstractDriver->Revolt\EventLoop\Internal\{closure}()
+#8 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(497): Fiber->resume()
+#9 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(553): Revolt\EventLoop\Internal\AbstractDriver->invokeCallbacks()
+#10 [internal function]: Revolt\EventLoop\Internal\AbstractDriver->Revolt\EventLoop\Internal\{closure}()
+#11 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(94): Fiber->resume()
+#12 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/DriverSuspension.php(117): Revolt\EventLoop\Internal\AbstractDriver->Revolt\EventLoop\Internal\{closure}()
+#13 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/amphp/amp/src/Future.php(251): Revolt\EventLoop\Internal\DriverSuspension->suspend()
+#14 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/madelineproto/src/Ipc/AbstractServer.php(176): Amp\Future->await()
+#15 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/madelineproto/src/Ipc/Runner/entry.php(119): danog\MadelineProto\Ipc\AbstractServer::waitShutdown()
+#16 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/madelineproto/src/Ipc/Runner/entry.php(154): danog\MadelineProto\Installer::danog\MadelineProto\Ipc\Runner\{closure}()
+#17 /www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar(52): require_once('...')
+#18 /www/wwwroot/admin.buypin.uz/public/madeline.test/madeline.php(173): require_once('...')
+#19 /www/wwwroot/admin.buypin.uz/public/madeline.test/madeline.php(211): danog\MadelineProto\Installer::load()
+#20 /www/wwwroot/admin.buypin.uz/public/madeline.test/madeline.php(249): danog\MadelineProto\Installer->install()
+#21 {main}
+AbstractServer: 	Got error while trying to send result of waitQrLogin: Amp\Ipc\Sync\ChannelException: The channel was already closed! in phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/ipc/lib/Sync/ChannelledSocket.php:39
+Stack trace:
+#0 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/madelineproto/src/Ipc/AbstractServer.php(272): Amp\Ipc\Sync\ChannelledSocket->send()
+#1 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(425): danog\MadelineProto\Ipc\AbstractServer->clientRequest()
+#2 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(616): Revolt\EventLoop\Internal\AbstractDriver->invokeMicrotasks()
+#3 [internal function]: Revolt\EventLoop\Internal\AbstractDriver->Revolt\EventLoop\Internal\{closure}()
+#4 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/DriverSuspension.php(171): Fiber->throw()
+#5 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(425): Revolt\EventLoop\Internal\DriverSuspension::Revolt\EventLoop\Internal\{closure}()
+#6 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(616): Revolt\EventLoop\Internal\AbstractDriver->invokeMicrotasks()
+#7 [internal function]: Revolt\EventLoop\Internal\AbstractDriver->Revolt\EventLoop\Internal\{closure}()
+#8 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/DriverSuspension.php(171): Fiber->throw()
+#9 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(425): Revolt\EventLoop\Internal\DriverSuspension::Revolt\EventLoop\Internal\{closure}()
+#10 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(616): Revolt\EventLoop\Internal\AbstractDriver->invokeMicrotasks()
+#11 [internal function]: Revolt\EventLoop\Internal\AbstractDriver->Revolt\EventLoop\Internal\{closure}()
+#12 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(497): Fiber->resume()
+#13 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(553): Revolt\EventLoop\Internal\AbstractDriver->invokeCallbacks()
+#14 [internal function]: Revolt\EventLoop\Internal\AbstractDriver->Revolt\EventLoop\Internal\{closure}()
+#15 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(94): Fiber->resume()
+#16 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/DriverSuspension.php(117): Revolt\EventLoop\Internal\AbstractDriver->Revolt\EventLoop\Internal\{closure}()
+#17 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/amphp/amp/src/Future.php(251): Revolt\EventLoop\Internal\DriverSuspension->suspend()
+#18 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/madelineproto/src/Ipc/AbstractServer.php(176): Amp\Future->await()
+#19 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/madelineproto/src/Ipc/Runner/entry.php(119): danog\MadelineProto\Ipc\AbstractServer::waitShutdown()
+#20 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/madelineproto/src/Ipc/Runner/entry.php(154): danog\MadelineProto\Installer::danog\MadelineProto\Ipc\Runner\{closure}()
+#21 /www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar(52): require_once('...')
+#22 /www/wwwroot/admin.buypin.uz/public/madeline.test/madeline.php(173): require_once('...')
+#23 /www/wwwroot/admin.buypin.uz/public/madeline.test/madeline.php(211): danog\MadelineProto\Installer::load()
+#24 /www/wwwroot/admin.buypin.uz/public/madeline.test/madeline.php(249): danog\MadelineProto\Installer->install()
+#25 {main}
+AbstractServer: 	Got error while trying to send error of error of waitQrLogin: Amp\Ipc\Sync\ChannelException: The channel was already closed! in phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/ipc/lib/Sync/ChannelledSocket.php:39
+Stack trace:
+#0 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/madelineproto/src/Ipc/AbstractServer.php(276): Amp\Ipc\Sync\ChannelledSocket->send()
+#1 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(425): danog\MadelineProto\Ipc\AbstractServer->clientRequest()
+#2 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(616): Revolt\EventLoop\Internal\AbstractDriver->invokeMicrotasks()
+#3 [internal function]: Revolt\EventLoop\Internal\AbstractDriver->Revolt\EventLoop\Internal\{closure}()
+#4 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/DriverSuspension.php(171): Fiber->throw()
+#5 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(425): Revolt\EventLoop\Internal\DriverSuspension::Revolt\EventLoop\Internal\{closure}()
+#6 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(616): Revolt\EventLoop\Internal\AbstractDriver->invokeMicrotasks()
+#7 [internal function]: Revolt\EventLoop\Internal\AbstractDriver->Revolt\EventLoop\Internal\{closure}()
+#8 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/DriverSuspension.php(171): Fiber->throw()
+#9 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(425): Revolt\EventLoop\Internal\DriverSuspension::Revolt\EventLoop\Internal\{closure}()
+#10 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(616): Revolt\EventLoop\Internal\AbstractDriver->invokeMicrotasks()
+#11 [internal function]: Revolt\EventLoop\Internal\AbstractDriver->Revolt\EventLoop\Internal\{closure}()
+#12 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(497): Fiber->resume()
+#13 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(553): Revolt\EventLoop\Internal\AbstractDriver->invokeCallbacks()
+#14 [internal function]: Revolt\EventLoop\Internal\AbstractDriver->Revolt\EventLoop\Internal\{closure}()
+#15 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/AbstractDriver.php(94): Fiber->resume()
+#16 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/revolt/event-loop/src/EventLoop/Internal/DriverSuspension.php(117): Revolt\EventLoop\Internal\AbstractDriver->Revolt\EventLoop\Internal\{closure}()
+#17 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/amphp/amp/src/Future.php(251): Revolt\EventLoop\Internal\DriverSuspension->suspend()
+#18 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/madelineproto/src/Ipc/AbstractServer.php(176): Amp\Future->await()
+#19 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/madelineproto/src/Ipc/Runner/entry.php(119): danog\MadelineProto\Ipc\AbstractServer::waitShutdown()
+#20 phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/madelineproto/src/Ipc/Runner/entry.php(154): danog\MadelineProto\Installer::danog\MadelineProto\Ipc\Runner\{closure}()
+#21 /www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar(52): require_once('...')
+#22 /www/wwwroot/admin.buypin.uz/public/madeline.test/madeline.php(173): require_once('...')
+#23 /www/wwwroot/admin.buypin.uz/public/madeline.test/madeline.php(211): danog\MadelineProto\Installer::load()
+#24 /www/wwwroot/admin.buypin.uz/public/madeline.test/madeline.php(249): danog\MadelineProto\Installer->install()
+#25 {main}
+Session:        	Garbage collected 4 incoming messages in DC 5, 0 left
+Session:        	Garbage collected 7 outgoing messages in DC 5, 1 left
+MTProto:        	Starting update system
+SessionPaths:   	Waiting for exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/safe.php.lock...
+SessionPaths:   	Got exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/safe.php.lock...
+SessionPaths:   	Waiting for exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/lightState.php.lock...
+SessionPaths:   	Got exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/lightState.php.lock...
+APIWrapper:     	Saved session!
+SessionPaths:   	Waiting for exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/safe.php.lock...
+SessionPaths:   	Got exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/safe.php.lock...
+SessionPaths:   	Waiting for exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/lightState.php.lock...
+SessionPaths:   	Got exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/lightState.php.lock...
+APIWrapper:     	Saved session!
+InternalDoc:    	{
+    "_": "user",
+    "self": true,
+    "contact": false,
+    "mutual_contact": false,
+    "deleted": false,
+    "bot": false,
+    "bot_chat_history": false,
+    "bot_nochats": false,
+    "verified": false,
+    "restricted": false,
+    "min": false,
+    "bot_inline_geo": false,
+    "support": false,
+    "scam": false,
+    "apply_min_photo": true,
+    "fake": false,
+    "bot_attach_menu": false,
+    "premium": false,
+    "attach_menu_enabled": false,
+    "bot_can_edit": false,
+    "close_friend": false,
+    "stories_hidden": false,
+    "stories_unavailable": true,
+    "contact_require_premium": false,
+    "bot_business": false,
+    "bot_has_main_app": false,
+    "id": 5621243508,
+    "first_name": "A",
+    "phone": "85265406658",
+    "photo": {
+        "_": "userProfilePhoto",
+        "has_video": true,
+        "personal": false,
+        "photo_id": 6332062270540067601,
+        "stripped_thumb": {
+            "_": "bytes",
+            "bytes": "AQgIk3Hd7UUUV1WRxOKP"
+        },
+        "dc_id": 5
+    },
+    "status": {
+        "_": "userStatusOffline",
+        "was_online": 1725884940
+    }
+}
+PingLoop:       	Ping DC 2.0
+FeedLoop:       	Resumed update feed loop generic
+MinDatabase:    	Found 1 pending contexts
+MinDatabase:    	Found 1 pending contexts
+UpdateHandler:  	Parsing updates (updates) received via the socket...
+FeedLoop:       	Resumed update feed loop generic
+UpdateHandler:  	Saving update of type updateMessageID
+UpdateHandler:  	Saving update of type updateNewMessage
+UpdateHandler:  	Saving update of type updateReadHistoryOutbox
+UpdateHandler:  	Parsing updates (updateShort) received via the socket...
+FeedLoop:       	Resumed update feed loop generic
+UpdateHandler:  	Saving update of type updateChannelMessageViews
+MinDatabase:    	Found 1 pending contexts
+UpdateHandler:  	Parsing updates (updates) received via the socket...
+FeedLoop:       	Resumed update feed loop generic
+UpdateHandler:  	Saving update of type updateNewMessage
+UpdateHandler:  	Parsing updates (updates) received via the socket...
+AbstractServer: 	Got error while calling IPC method: Telegram returned an RPC error: The user is already in the group. (400) (USER_ALREADY_PARTICIPANT), caused by phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/madelineproto/src/RPCErrorException.php:692<br>
+Revision: 8.3.0<br>
+<br>
+TL trace:<br>
+['messages.importChatInvite']<br><br>
+ResponseHandler.php(405):	make()<br><br>
+WrappedFuture.php(59):	danog\MadelineProto\MTProtoSession\{closure}()<br><br>
+CallHandler.php(92):	await()<br><br>
+CallHandler.php(45):	methodCallAsyncRead()<br><br>
+AbstractServer.php(256):	methodCallAsyncRead()<br><br>
+AbstractDriver.php(425):	clientRequest()<br><br>
+AbstractDriver.php(616):	invokeMicrotasks()<br><br>
+Revolt\EventLoop\Internal\{closure}()<br><br>
+DriverSuspension.php(64):	resume()<br><br>
+AbstractDriver.php(425):	Revolt\EventLoop\Internal\{closure}()<br><br>
+AbstractDriver.php(616):	invokeMicrotasks()<br><br>
+Revolt\EventLoop\Internal\{closure}()<br><br>
+AbstractDriver.php(497):	resume()<br><br>
+AbstractDriver.php(553):	invokeCallbacks()<br><br>
+Revolt\EventLoop\Internal\{closure}()<br><br>
+AbstractDriver.php(94):	resume()<br><br>
+DriverSuspension.php(117):	Revolt\EventLoop\Internal\{closure}()<br><br>
+Future.php(251):    	suspend()<br><br>
+AbstractServer.php(176):	await()<br><br>
+entry.php(119):     	waitShutdown()<br><br>
+entry.php(154):     	danog\MadelineProto\Ipc\Runner\{closure}()<br><br>
+madeline-8.3.0.phar(52):	require_once("phar:\/\/\/www\/wwwroot\/admin.buypin.uz\/public\/madeline.test\/madeline-8.3.0.phar\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/entry.php")<br><br>
+madeline.php(173):  	require_once("\/www\/wwwroot\/admin.buypin.uz\/public\/madeline.test\/madeline-8.3.0.phar")<br><br>
+madeline.php(211):  	load()<br><br>
+madeline.php(249):  	install()<br>
+
+InternalDoc:    	Telegram returned an RPC error: The user is already in the group. (400) (USER_ALREADY_PARTICIPANT), caused by phar:///www/wwwroot/admin.buypin.uz/public/madeline.test/madeline-8.3.0.phar/vendor/danog/madelineproto/src/RPCErrorException.php:692<br>
+Revision: 8.3.0<br>
+<br>
+TL trace:<br>
+['messages.importChatInvite']<br><br>
+ResponseHandler.php(405):	make()<br><br>
+WrappedFuture.php(59):	danog\MadelineProto\MTProtoSession\{closure}()<br><br>
+CallHandler.php(92):	await()<br><br>
+CallHandler.php(45):	methodCallAsyncRead()<br><br>
+AbstractServer.php(256):	methodCallAsyncRead()<br><br>
+AbstractDriver.php(425):	clientRequest()<br><br>
+AbstractDriver.php(616):	invokeMicrotasks()<br><br>
+Revolt\EventLoop\Internal\{closure}()<br><br>
+DriverSuspension.php(64):	resume()<br><br>
+AbstractDriver.php(425):	Revolt\EventLoop\Internal\{closure}()<br><br>
+AbstractDriver.php(616):	invokeMicrotasks()<br><br>
+Revolt\EventLoop\Internal\{closure}()<br><br>
+AbstractDriver.php(497):	resume()<br><br>
+AbstractDriver.php(553):	invokeCallbacks()<br><br>
+Revolt\EventLoop\Internal\{closure}()<br><br>
+AbstractDriver.php(94):	resume()<br><br>
+DriverSuspension.php(117):	Revolt\EventLoop\Internal\{closure}()<br><br>
+Future.php(251):    	suspend()<br><br>
+AbstractServer.php(176):	await()<br><br>
+entry.php(119):     	waitShutdown()<br><br>
+entry.php(154):     	danog\MadelineProto\Ipc\Runner\{closure}()<br><br>
+madeline-8.3.0.phar(52):	require_once("phar:\/\/\/www\/wwwroot\/admin.buypin.uz\/public\/madeline.test\/madeline-8.3.0.phar\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/entry.php")<br><br>
+madeline.php(173):  	require_once("\/www\/wwwroot\/admin.buypin.uz\/public\/madeline.test\/madeline-8.3.0.phar")<br><br>
+madeline.php(211):  	load()<br><br>
+madeline.php(249):  	install()<br>
+<br>
+Client TL trace:<br><br>
+ClientAbstract.php(99):	getException()<br><br>
+AbstractDriver.php(425):	loopInternal()<br><br>
+AbstractDriver.php(562):	invokeMicrotasks()<br><br>
+Revolt\EventLoop\Internal\{closure}()<br><br>
+DriverSuspension.php(64):	resume()<br><br>
+AbstractDriver.php(425):	Revolt\EventLoop\Internal\{closure}()<br><br>
+AbstractDriver.php(616):	invokeMicrotasks()<br><br>
+Revolt\EventLoop\Internal\{closure}()<br><br>
+AbstractDriver.php(497):	resume()<br><br>
+AbstractDriver.php(553):	invokeCallbacks()<br><br>
+Revolt\EventLoop\Internal\{closure}()<br><br>
+AbstractDriver.php(94):	resume()<br><br>
+DriverSuspension.php(117):	Revolt\EventLoop\Internal\{closure}()<br><br>
+Future.php(251):    	suspend()<br><br>
+ClientAbstract.php(158):	await()<br><br>
+Client.php(106):    	__call()<br><br>
+Client.php(286):    	__call()<br><br>
+AbstractAPI.php(70):	methodCallAsyncRead()<br><br>
+index.php(27):      	__call()<br>
+
+PingLoop:       	Ping DC 5.0
+UpdateHandler:  	Parsing updates (updates) received via the socket...
+SeqLoop:        	Was fed updates of type updates...
+FeedLoop:       	Resumed update feed loop channel -1002019076152
+MinDatabase:    	Don't have origin info with min peer 2019076152, this may fail
+UpdateLoop:     	Channel private, exiting getUpdate loop channel -1002019076152
+UpdateHandler:  	Parsing updates (updates) received via the socket...
+SeqLoop:        	Was fed updates of type updates...
+FeedLoop:       	Resumed update feed loop channel -1001379843356
+MinDatabase:    	Don't have origin info with min peer 1379843356, this may fail
+UpdateHandler:  	Parsing updates (updates) received via the socket...
+SeqLoop:        	Was fed updates of type updates...
+FeedLoop:       	Resumed update feed loop generic
+UpdateHandler:  	Saving update of type updateUserStatus
+UpdateLoop:     	Channel private, exiting getUpdate loop channel -1001379843356
+Session:        	Garbage collected 2 incoming messages in DC 2, 0 left
+Session:        	Garbage collected 2 outgoing messages in DC 2, 0 left
+PingLoop:       	Ping DC 2.0
+MinDatabase:    	Found 1 pending contexts
+UpdateHandler:  	Parsing updates (updates) received via the socket...
+FeedLoop:       	Resumed update feed loop generic
+UpdateHandler:  	Saving update of type updateReadHistoryInbox
+PingLoop:       	Ping DC 5.0
+Session:        	Garbage collected 29 incoming messages in DC 5, 0 left
+Session:        	Garbage collected 32 outgoing messages in DC 5, 0 left
+PingLoop:       	Ping DC 2.0
+UpdateHandler:  	Parsing updates (updates) received via the socket...
+SeqLoop:        	Was fed updates of type updates...
+UpdateHandler:  	Parsing updates (updateShort) received via the socket...
+UpdateHandler:  	Parsing updates (updates) received via the socket...
+SeqLoop:        	Was fed updates of type updates...
+UpdateHandler:  	Parsing updates (updateShort) received via the socket...
+FeedLoop:       	Resumed update feed loop channel -1002104015936
+MinDatabase:    	Don't have origin info with min peer 2104015936, this may fail
+FeedLoop:       	Resumed update feed loop generic
+UpdateHandler:  	Saving update of type updateUserStatus
+FeedLoop:       	Resumed update feed loop channel -1002019076152
+MinDatabase:    	Don't have origin info with min peer 2019076152, this may fail
+FeedLoop:       	Resumed update feed loop channel -1001835064040
+MinDatabase:    	Don't have origin info with min peer 1835064040, this may fail
+UpdateLoop:     	Channel private, exiting getUpdate loop channel -1002019076152
+UpdateLoop:     	Channel private, exiting getUpdate loop channel -1001835064040
+UpdateLoop:     	Channel private, exiting getUpdate loop channel -1002104015936
+FeedLoop:       	Resumed update feed loop channel -1002019076152
+FeedLoop:       	Got channel too long update, getting difference...
+FeedLoop:       	Resumed update feed loop channel -1001379843356
+FeedLoop:       	Resumed update feed loop channel -1001835064040
+FeedLoop:       	Resumed update feed loop channel -1002104015936
+PingLoop:       	Ping DC 5.0
+UpdateHandler:  	Parsing updates (updateShort) received via the socket...
+FeedLoop:       	Resumed update feed loop generic
+UpdateHandler:  	Saving update of type updateUserStatus
+Session:        	Garbage collected 2 incoming messages in DC 2, 0 left
+Session:        	Garbage collected 2 outgoing messages in DC 2, 0 left
+SessionPaths:   	Waiting for exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/safe.php.lock...
+SessionPaths:   	Got exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/safe.php.lock...
+SessionPaths:   	Waiting for exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/lightState.php.lock...
+SessionPaths:   	Got exclusive lock of /www/wwwroot/admin.buypin.uz/public/madeline.test/session.madeline/lightState.php.lock...
+APIWrapper:     	Saved session!
+PingLoop:       	Ping DC 2.0
+PingLoop:       	Ping DC 5.0
+UpdateHandler:  	Parsing updates (updateShort) received via the socket...
+FeedLoop:       	Resumed update feed loop generic
+UpdateHandler:  	Saving update of type updateMessagePoll
+Session:        	Garbage collected 22 incoming messages in DC 5, 0 left
+Session:        	Garbage collected 14 outgoing messages in DC 5, 0 left
+UpdateHandler:  	Parsing updates (updateShort) received via the socket...
+UpdateHandler:  	Parsing updates (updateShort) received via the socket...
+FeedLoop:       	Resumed update feed loop generic
+UpdateHandler:  	Saving update of type updateUserStatus
+UpdateHandler:  	Saving update of type updateMessagePoll
+PingLoop:       	Ping DC 2.0
+UpdateHandler:  	Parsing updates (updateShort) received via the socket...
+FeedLoop:       	Resumed update feed loop generic
+UpdateHandler:  	Saving update of type updateUserStatus
+UpdateHandler:  	Parsing updates (updateShort) received via the socket...
+FeedLoop:       	Resumed update feed loop generic
+UpdateHandler:  	Saving update of type updateUserStatus

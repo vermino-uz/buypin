@@ -27,7 +27,20 @@
                         }
                     },
                     "401": {
-                        "description": "Unauthorized"
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Unauthorized"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -67,13 +80,13 @@
                 }
             }
         },
-        "/bonuses": {
+        "/api/bonuses": {
             "get": {
                 "tags": [
                     "Bonuses"
                 ],
                 "summary": "Get all bonuses",
-                "operationId": "131515ec53ae586847f7a3643ec5ac9b",
+                "operationId": "7cc51fdfb0e41eb216289d136c270fa5",
                 "responses": {
                     "200": {
                         "description": "Successful operation",
@@ -82,7 +95,7 @@
                                 "schema": {
                                     "type": "array",
                                     "items": {
-                                        "$ref": "bonuses"
+                                        "$ref": "#/components/schemas/Bonus"
                                     }
                                 }
                             }
@@ -91,13 +104,13 @@
                 }
             }
         },
-        "/bonuses/{id}": {
+        "/api/bonuses/{id}": {
             "get": {
                 "tags": [
                     "Bonuses"
                 ],
                 "summary": "Get a specific bonus by ID",
-                "operationId": "a2c241a840ed43ab1e7405fcee59b45f",
+                "operationId": "736dcc7aeee1b5732f142e5fd8299e43",
                 "parameters": [
                     {
                         "name": "id",
@@ -115,7 +128,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "bonuses"
+                                    "$ref": "#/components/schemas/Bonus"
                                 }
                             }
                         }
@@ -123,13 +136,13 @@
                 }
             }
         },
-        "/bonuses/get/{promo}": {
+        "/api/bonuses/get/{promo}": {
             "get": {
                 "tags": [
                     "Bonuses"
                 ],
                 "summary": "Get bonus by promo code",
-                "operationId": "04bf60fdc4a5ff46e5b15617ced46023",
+                "operationId": "3ce7df3e4e6b2b71a30c177e2909bf6d",
                 "parameters": [
                     {
                         "name": "promo",
@@ -147,7 +160,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "bonuses"
+                                    "$ref": "#/components/schemas/Bonus"
                                 }
                             }
                         }
@@ -232,7 +245,7 @@
                                 "schema": {
                                     "type": "array",
                                     "items": {
-                                        "$ref": "games"
+                                        "$ref": "#/components/schemas/Game"
                                     }
                                 }
                             }
@@ -241,13 +254,13 @@
                 }
             }
         },
-        "/promo-codes": {
+        "/api/prices-by-id": {
             "get": {
                 "tags": [
-                    "Promo Codes"
+                    "Prices"
                 ],
-                "summary": "Get all promo codes",
-                "operationId": "1d0c5648eca614db028ce1efe3892c18",
+                "summary": "Get prices of tariffs by games",
+                "operationId": "743a670e22baa57529f2377efcaef621",
                 "responses": {
                     "200": {
                         "description": "Successful operation",
@@ -256,7 +269,7 @@
                                 "schema": {
                                     "type": "array",
                                     "items": {
-                                        "$ref": "promo-codes"
+                                        "$ref": "#/components/schemas/PromoCode"
                                     }
                                 }
                             }
@@ -265,25 +278,93 @@
                 }
             }
         },
-        "/api/promo-codes": {
+        "/api/prices-by-id/{game_id}": {
+            "get": {
+                "tags": [
+                    "Prices"
+                ],
+                "summary": "Get prices of tariffs by game ID",
+                "operationId": "0cfe68b58c68d38aa28f4be5810fd714",
+                "parameters": [
+                    {
+                        "name": "game_id",
+                        "in": "path",
+                        "description": "Game ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/PromoCode"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/prices": {
+            "get": {
+                "tags": [
+                    "Prices"
+                ],
+                "summary": "Get prices of tariffs by games",
+                "operationId": "946a7d12489f79c770f5a6755594d8ee",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/PromoCode"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/promo-code": {
             "post": {
                 "tags": [
                     "Promo Codes"
                 ],
-                "summary": "Store a new promo code",
-                "operationId": "19888c8677883a0484492ca0ffc5772d",
+                "summary": "Get a promo code",
+                "operationId": "4db3236676a5993b7453e5b82826bc81",
                 "requestBody": {
+                    "required": true,
                     "content": {
                         "application/json": {
                             "schema": {
+                                "required": [
+                                    "game_id",
+                                    "user_id",
+                                    "tariff_id"
+                                ],
                                 "properties": {
-                                    "user_id": {
+                                    "game_id": {
+                                        "description": "Game ID",
                                         "type": "integer"
                                     },
-                                    "game_id": {
+                                    "user_id": {
+                                        "description": "User ID",
                                         "type": "integer"
                                     },
                                     "amount": {
+                                        "description": "Amount of value",
                                         "type": "integer"
                                     }
                                 },
@@ -294,38 +375,73 @@
                 },
                 "responses": {
                     "200": {
-                        "description": "Promo code stored successfully"
-                    },
-                    "404": {
-                        "description": "Promo code not found"
-                    }
-                }
-            }
-        },
-        "/promo-codes/get-promo-code": {
-            "post": {
-                "tags": [
-                    "Promo Codes"
-                ],
-                "summary": "Get a promo code",
-                "operationId": "685918801165134ba88342fe355827b3",
-                "requestBody": {
-                    "required": true,
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "promo-codes"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "200": {
                         "description": "Successful operation",
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "promo-codes"
+                                    "properties": {
+                                        "id": {
+                                            "description": "ID",
+                                            "type": "integer"
+                                        },
+                                        "game_id": {
+                                            "description": "Game ID",
+                                            "type": "integer"
+                                        },
+                                        "amount": {
+                                            "description": "Amount",
+                                            "type": "integer"
+                                        },
+                                        "price": {
+                                            "description": "Price",
+                                            "type": "number"
+                                        },
+                                        "tariff_id": {
+                                            "description": "Tariff ID",
+                                            "type": "integer"
+                                        },
+                                        "user_id": {
+                                            "description": "User ID",
+                                            "type": "integer"
+                                        },
+                                        "promo": {
+                                            "description": "Promo code",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "402": {
+                        "description": "Payment required",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "error": {
+                                            "description": "Error message",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Promocode not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "error": {
+                                            "description": "Error message",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
                                 }
                             }
                         }
@@ -333,13 +449,13 @@
                 }
             }
         },
-        "/promo-codes/{game_id}": {
+        "/api/prices/{game_id}": {
             "get": {
                 "tags": [
-                    "Promo Codes"
+                    "Prices"
                 ],
-                "summary": "Get promo codes by game ID",
-                "operationId": "aa04305f77b36bac96dba6e5c3ea3bdc",
+                "summary": "Get prices by game ID",
+                "operationId": "d2e164c72e14702548576b686ae71e88",
                 "parameters": [
                     {
                         "name": "game_id",
@@ -357,7 +473,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "promo-codes"
+                                    "$ref": "#/components/schemas/PromoCode"
                                 }
                             }
                         }
@@ -365,13 +481,24 @@
                 }
             }
         },
-        "/requests": {
+        "/api/history/{user_id}": {
             "get": {
                 "tags": [
                     "Requests"
                 ],
-                "summary": "Get all requests",
-                "operationId": "710454682359a38d76568e36c6cbe851",
+                "summary": "Get requests by user ID",
+                "operationId": "fb80a9198508e1d5405baf063430eda5",
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": "User ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "Successful operation",
@@ -380,26 +507,46 @@
                                 "schema": {
                                     "type": "array",
                                     "items": {
-                                        "$ref": "requests"
+                                        "$ref": "#/components/schemas/Request"
                                     }
                                 }
                             }
                         }
                     }
                 }
-            },
+            }
+        },
+        "/api/create-request": {
             "post": {
                 "tags": [
                     "Requests"
                 ],
                 "summary": "Create a request",
-                "operationId": "fe92316bd8d2e46452c729e51b04fbb6",
+                "operationId": "01fd744d50eb1a4500be41e88e8e4ffb",
                 "requestBody": {
                     "required": true,
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "requests"
+                                "properties": {
+                                    "account": {
+                                        "description": "Account of the request",
+                                        "type": "integer"
+                                    },
+                                    "user_id": {
+                                        "description": "ID of the user",
+                                        "type": "integer"
+                                    },
+                                    "game": {
+                                        "description": "ID of the game",
+                                        "type": "integer"
+                                    },
+                                    "tariff": {
+                                        "description": "Tariff amount",
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object"
                             }
                         }
                     }
@@ -410,7 +557,63 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "requests"
+                                    "$ref": "#/components/schemas/Request"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Validation error"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "402": {
+                        "description": "Insufficient balance",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "error": {
+                                            "type": "string",
+                                            "example": "Insufficient balance"
+                                        },
+                                        "shortfall": {
+                                            "type": "number",
+                                            "example": "10.50"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "There is nothing to hack bro!"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal server error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Failed to update user balance"
+                                        }
+                                    },
+                                    "type": "object"
                                 }
                             }
                         }
@@ -418,33 +621,100 @@
                 }
             }
         },
-        "/game-tariffs": {
+        "/api/top-up": {
             "post": {
                 "tags": [
-                    "Tariffs"
+                    "Top-up"
                 ],
-                "summary": "Get tariffs by game",
-                "operationId": "57d4e4434dd5e0a14b6ef4533fc69b50",
+                "summary": "Create a top-up record",
+                "operationId": "1186f45a8d39c9ac9141a78a6af0178e",
                 "requestBody": {
                     "required": true,
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "tariffs"
+                                "properties": {
+                                    "user_id": {
+                                        "description": "ID of the user",
+                                        "type": "integer"
+                                    },
+                                    "amount": {
+                                        "description": "Amount to top up",
+                                        "type": "number"
+                                    }
+                                },
+                                "type": "object"
                             }
                         }
                     }
                 },
                 "responses": {
-                    "200": {
-                        "description": "Successful operation",
+                    "201": {
+                        "description": "Top-up record created",
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "type": "array",
-                                    "items": {
-                                        "$ref": "tariffs"
-                                    }
+                                    "properties": {
+                                        "id": {
+                                            "description": "ID of the created top-up record",
+                                            "type": "integer"
+                                        },
+                                        "user_id": {
+                                            "description": "ID of the user",
+                                            "type": "integer"
+                                        },
+                                        "amount": {
+                                            "description": "Amount topped up",
+                                            "type": "number"
+                                        },
+                                        "status": {
+                                            "description": "Status of the top-up",
+                                            "type": "string"
+                                        },
+                                        "created_at": {
+                                            "description": "Creation timestamp",
+                                            "type": "string",
+                                            "format": "date-time"
+                                        },
+                                        "updated_at": {
+                                            "description": "Last update timestamp",
+                                            "type": "string",
+                                            "format": "date-time"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Validation error"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal server error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Failed to create top-up record"
+                                        }
+                                    },
+                                    "type": "object"
                                 }
                             }
                         }
@@ -467,13 +737,40 @@
                         "description": "Image of the banner",
                         "type": "string"
                     },
-                    "text": {
-                        "description": "Text of the banner",
+                    "name": {
+                        "description": "Name of the banner",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "Description of the banner",
                         "type": "string"
                     },
                     "url": {
                         "description": "URL of the banner",
                         "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "Bonus": {
+                "title": "Bonus",
+                "description": "Bonus model",
+                "properties": {
+                    "id": {
+                        "description": "ID of the bonus",
+                        "type": "integer"
+                    },
+                    "promo": {
+                        "description": "Promo code of the bonus",
+                        "type": "string"
+                    },
+                    "count_to_use": {
+                        "description": "Count to use of the bonus",
+                        "type": "integer"
+                    },
+                    "amount": {
+                        "description": "Amount of the bonus",
+                        "type": "number"
                     }
                 },
                 "type": "object"
@@ -529,6 +826,68 @@
                     }
                 },
                 "type": "object"
+            },
+            "PromoCode": {
+                "title": "PromoCode",
+                "description": "PromoCode model",
+                "properties": {
+                    "id": {
+                        "description": "ID of the promo code",
+                        "type": "integer"
+                    },
+                    "game_id": {
+                        "description": "ID of the game",
+                        "type": "integer"
+                    },
+                    "promo": {
+                        "description": "Promo code",
+                        "type": "string"
+                    },
+                    "price": {
+                        "description": "Price of the promo code",
+                        "type": "number"
+                    },
+                    "amount": {
+                        "description": "Amount of the promo code",
+                        "type": "number"
+                    },
+                    "is_sold": {
+                        "description": "Is the promo code sold",
+                        "type": "boolean"
+                    }
+                },
+                "type": "object"
+            },
+            "Request": {
+                "title": "Request",
+                "description": "Request model",
+                "properties": {
+                    "id": {
+                        "description": "ID of the request",
+                        "type": "integer"
+                    },
+                    "user_id": {
+                        "description": "ID of the user",
+                        "type": "integer"
+                    },
+                    "game": {
+                        "description": "Game name",
+                        "type": "string"
+                    },
+                    "tariff": {
+                        "description": "Tariff name",
+                        "type": "string"
+                    },
+                    "account": {
+                        "description": "Account of the request",
+                        "type": "integer"
+                    },
+                    "is_fulfilled": {
+                        "description": "Is the request fulfilled",
+                        "type": "boolean"
+                    }
+                },
+                "type": "object"
             }
         }
     },
@@ -550,6 +909,10 @@
             "description": "Games"
         },
         {
+            "name": "Prices",
+            "description": "Prices"
+        },
+        {
             "name": "Promo Codes",
             "description": "Promo Codes"
         },
@@ -558,8 +921,8 @@
             "description": "Requests"
         },
         {
-            "name": "Tariffs",
-            "description": "Tariffs"
+            "name": "Top-up",
+            "description": "Top-up"
         }
     ]
 }
