@@ -12,8 +12,6 @@ class TopUp extends Model
     protected $fillable = [
         'user_id',
         'amount',
-        'status',
-        'created_at',
-        'updated_at'
+        'status',   
     ];
 }
