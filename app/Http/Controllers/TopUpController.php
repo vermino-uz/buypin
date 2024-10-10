@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\TopUp;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Http\Response;
 
 class TopUpController extends Controller
@@ -59,11 +60,20 @@ class TopUpController extends Controller
             $topUp = TopUp::create([
                 'user_id' => $validatedData['user_id'],
                 'amount' => $validatedData['amount'],
-                'status' => 'processing', // Assuming initial status is pending
+                'status' => 'processing',
             ]);
 
             return response()->json($topUp, Response::HTTP_CREATED);
         } catch (\Exception $e) {
+            // Log the exception for debugging
+            Log::error('TopUp creation failed: ' . $e->getMessage());
+
+            // Check if the exception is due to a database constraint violation
+            if ($e instanceof \Illuminate\Database\QueryException) {
+                // This could happen if the bot_users table doesn't have the user_id
+                return response()->json(['message' => 'User not found'], Response::HTTP_NOT_FOUND);
+            }
+
             return response()->json(['message' => 'Failed to create top-up record'], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
     }
